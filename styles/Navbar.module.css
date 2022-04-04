@@ -1,0 +1,19 @@
+.navbar{
+    color:black;
+    position:absolute;
+    z-index: 500;
+    display: flex;
+    width: 100vw;
+    height: 90px;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+.navbar ul li{
+   cursor: pointer;
+}
