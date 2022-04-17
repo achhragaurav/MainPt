@@ -5,6 +5,8 @@ import BallElasticAnimComp from './AnimationComp/BallElasticAnimComp';
 import {gsap} from "gsap"
 const Navbar = ({color}) => {
   const menuRef = useRef(null);
+  const roundRef = useRef(null);
+
   const [menuOpen, setMenuOpen] = useState(false)
   return (
     <nav className={styles["navbar"]}>
@@ -21,12 +23,15 @@ const Navbar = ({color}) => {
             onClick={() =>{
               if(menuOpen){
                 gsap.to(menuRef.current,{x:`100vh`});
-                gsap.to(menuRef.current,{borderRadius: `50%`,})
+                gsap.to(roundRef.current,{height: '120px',})
+                gsap.to(roundRef.current,{x: '0px',})
                 setMenuOpen(false)
               }
               else{
                 gsap.to(menuRef.current,{x:`50vh`,})
-                gsap.to(menuRef.current,{borderRadius: `0`})
+                gsap.to(roundRef.current,{height: '0px',})
+                gsap.to(roundRef.current,{x: '84px',})
+
                 setMenuOpen(true)
 
               }
@@ -36,6 +41,9 @@ const Navbar = ({color}) => {
               <span></span>
             </div>
             <div className={styles["second-menu-container"]} ref={menuRef}>
+              <div className={styles["rounded-div-wrapper"]} ref={roundRef}>
+                <div className={styles["rounded-div"]} ></div>
+              </div>
               <ul>
               <li >
               <Link  href="/" >Home</Link>
