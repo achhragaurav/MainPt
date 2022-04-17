@@ -6,7 +6,7 @@ import styles from "../styles/Work/Work.module.css"
 const work = () => {
   return (
     <>
-    <Navbar/>
+    <Navbar color={"black"}/>
     <Layout />
 <main className={styles["main"]}>
 Work Page

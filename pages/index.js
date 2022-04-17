@@ -4,16 +4,38 @@ import { motion } from 'framer-motion'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import styles from "../styles/Home/HomePage.module.css"
+import { useState } from 'react'
+import { useEffect, useRef } from 'react'
+import {gsap} from 'gsap'
+import BallElasticAnimComp from '../components/AnimationComp/BallElasticAnimComp'
+import BigProjectList from '../components/Projects/BigProjectList'
+import AboutHome from '../components/About/AboutHome'
+import Collage from '../components/Collage/Collage'
+import ContactHome from '../components/Contact/ContactHome'
 
 export default function Home() {
+  const aboutRef = useRef(null);
+  const aboutHeadingRef = useRef(null);
+
+
+
   return (
     <>
-    <Navbar/>
+    <Navbar color={"white"}/>
     <Layout />
       <div className={styles["main"]}>
-        <p>Lorem ipsum dolor, sit amet consectetur 
-          adipisicing elit. Amet iste dicta vitae nisi quaerat impedit eum cumque, ad quis sequi quisquam harum, voluptatibus maxime ipsam eveniet mollitia similique accusamus modi. Officia corrupti debitis eius, numquam repudiandae consectetur beatae autem consequatur quia rem exercitationem
-           quibusdam doloremque? Perspiciatis dolorem quod expedita explicabo.</p>
+      </div>
+      <AboutHome/>
+      <div className={styles["main-projects"]}>
+        <div className={styles["main-projects-container"]}>
+          <BigProjectList/>
+        </div>
+      </div>
+      <div className={styles["main-collage"]}>
+        <Collage/>
+      </div>
+      <div className={styles["main-contact"]}>
+        <ContactHome/>
       </div>
         </>
 

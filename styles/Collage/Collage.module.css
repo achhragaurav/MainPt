@@ -1,0 +1,35 @@
+.collage{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 8in;
+}
+.collage-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.collage ul{
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: space-around;
+   list-style:none;
+ }
+.collage ul li{
+    margin-right: 3vw;
+    min-width: 27vw;
+}
+.collage img{
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .collage {
+        display: none;
+    }
+  }

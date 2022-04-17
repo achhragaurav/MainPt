@@ -5,7 +5,7 @@ import styles from "../styles/Contact/ContactPage.module.css"
 const Contact = () => {
   return (
     <>
-    <Navbar/>
+    <Navbar color={"black"}/>
     <Layout />
     <main className={styles["main"]}>
 Contact Page

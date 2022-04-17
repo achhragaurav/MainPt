@@ -1,19 +1,87 @@
 .navbar{
-    color:black;
+    color:rgb(27, 27, 27);
     position:absolute;
     z-index: 500;
     display: flex;
     width: 100vw;
     height: 90px;
+    align-items: center;
+    justify-content: space-between;
 }
 .navbar ul{
     list-style: none;
     display: flex;
-    width: 50%;
+    width: 25%;
     align-items: center;
     justify-content: space-around;
-    font-size: 2rem;
+    font-size:1rem;
+}
+.logo{
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
 }
 .navbar ul li{
    cursor: pointer;
 }
+.container{
+    border-radius: 50%;
+}
+.second-nav{
+    display: none;
+}
+.first-nav{
+    display: flex;
+}
+@media only screen and (max-width: 884px) {
+
+    .first-nav{
+        display: none !important;
+    }
+    .second-nav{
+        display: flex;
+        height: fit-content;
+        position: absolute;
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+    .second-menu-container{
+        width: 120vh;
+        height: 120vh;
+        min-height: 7.5in;
+        position: absolute;
+        display: flex;
+        /* left: 60vw; */
+        background-color: black;
+        color: white;
+        top: 0;
+        z-index: 3000;
+        transform: translateX(100vw);
+        align-items: center;
+    }
+    .second-menu-container ul{
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        font-size: 3rem;
+        margin: 0;
+        width: 40%;
+    }
+    .menu-btn span{
+        width: 30px;
+        height: .3px;
+        background: white;
+        display: block;
+        position: relative;
+        z-index: 5000;
+        top: 40px;
+        left: 89vw;
+        margin-bottom: 10px;
+    }
+
+  }

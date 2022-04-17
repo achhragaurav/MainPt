@@ -6,7 +6,7 @@ import styles from "../styles/About/AboutPage.module.css"
 const About = () => {
   return (
     <>
-    <Navbar/>
+    <Navbar color={"black"}/>
     <Layout />
 <main className={styles["main"]}>
 About Page

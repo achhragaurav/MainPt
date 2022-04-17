@@ -1,3 +1,210 @@
-.main{
-    padding-top: 10vh;
+.contact{
+    width: 100%;
+    max-height: 9.5in;
+    height: 100vh;
+    background-color: #1c1d20;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-first{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 3in;
+    height: 80%;
+}
+.contact-second{}
+.first-one{
+    display: flex;
+    width: 80%;
+    height: 35%;
+    align-items: center;
+    justify-content: space-between;
+    height: 33.33%;
+    
+}
+.first-one-left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.first-one-left h1{
+    font-size: 6em;
+    font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    width: 50%;
+}
+.first-one-left img{
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    object-fit: cover;
+}
+.first-one-right span{
+    transform: rotate(45deg);
+font-size: 2em;
+position: relative;
+display: block;
+}
+.first-two{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: 33.33%;
+}
+.first-two span{
+width: 80%;
+height: .3px;
+background-color: white;
+display: block;
+}
+.first-two .container{
+    position: absolute;
+    top: 20%;
+    margin: 0;
+    left: 40vw;
+}
+.first-three{
+    width: 100%;
+   height: 33.33%;
+}
+.three-buttons{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.three-buttons button{
+    cursor: pointer;
+    color: white;
+    border: 1px solid rgb(107, 107, 107);
+    outline: none;
+    padding: 20px 40px;
+    border-radius: 2.1rem;
+    font-size: 1rem;
+    background-color: transparent;
+    min-width: fit-content;
+    margin-right:1rem ;
+}
+.contact-second{
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.contact-sec-container{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.vlt{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 4in;
+    min-width: 3.5in;
+}
+.version, .local-time{
+    display: flex;
+    flex-direction: column;
+}
+.version{
+}
+.local-time{}
+.socials{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 4in;
+    min-width: 3.5in;
+
+}
+/* Ball */
+
+.container{
+    margin-top: 5rem;
+    border-radius: 50%;
+    min-width: 1.8in;
+    min-height: 1.8in;
+    width: 1.8in;
+    height: 1.8in;
+    background-color: #455ce9;
+    color: white;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 857px) {
+
+.contact-sec-container{
+    justify-content: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .contact-first{
+        align-items: center;
+        justify-content: center;
+    }
+    .first-one-left img{
+      width: 50px;
+      height: 50px;
+    }
+    .first-one-left h1{
+        font-size: 10vw;
+        font-weight: 300;
+    }
+    .first-two{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .first-two .container{
+        position: absolute;
+        top: 0%;
+        margin: 0;
+        left: 25%;
+    }
+    .first-three{
+        align-items: center;
+        justify-content: center;
+    }
+    .three-buttons{
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .three-buttons button{
+    
+        margin: 0;
+    }
+    .contact-sec-container{
+        justify-content: center;
+        }
+    
 }
