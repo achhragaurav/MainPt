@@ -8,16 +8,19 @@ const BallElasticAnimComp = ({children, styles,title}) => {
     <div className={styles["container"]} ref={ballRef}
     onMouseMove={(e) =>{
         let rect = ballRef.current.getBoundingClientRect();
+        const center = (rect.right-rect.left)/2
+        
+        console.log(center);
         let x = e.clientX - rect.left; //x position within the element.
          let y = e.clientY - rect.top; //y position within the element.
-         console.log(Math.floor(x), Math.floor(y));
+        //  console.log(x,y);
          gsap.to(ballRef.current, {
-           x:Math.floor(x-100),
-           y:Math.floor(y-100),
+           x:Math.floor(x-center),
+           y:Math.floor(y-center),
          })
          gsap.to(ballHeadingRef.current, {
-           x:Math.floor((x-100)/2),
-           y:Math.floor((y-100)/2),
+           x:Math.floor((x-center)/2),
+           y:Math.floor((y-center)/2),
          })
        }}
        onMouseLeave={(e) =>{

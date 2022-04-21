@@ -1,126 +1,134 @@
 .navbar{
-    color:rgb(27, 27, 27);
-    position:absolute;
-    z-index: 500;
-    display: flex;
     width: 100vw;
     height: 90px;
+    position: absolute;
+    color: white;
+}
+.first-nav{
+    display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
-.navbar ul{
-    list-style: none;
+.list-container{
+    width: 40%;
+}
+.first-nav ul{
     display: flex;
-    width: 25%;
+    list-style: none;
+    width: 100%;
     align-items: center;
     justify-content: space-around;
-    font-size:1rem;
 }
-.logo{
-    width: 20%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
 
-}
-.navbar ul li{
-   cursor: pointer;
-}
-.container{
-    border-radius: 50%;
+.first-nav .logo{
+    width: 20%;
 }
 .second-nav{
     display: none;
 }
-.first-nav{
-    display: flex;
+.menu-btn{
+    position: fixed;
+    z-index: 8000;
+    right: 50px;
+    top: 50px;
+    border-radius: 50%;
+    transform-origin: center;
 }
-@media only screen and (max-width: 884px) {
-
+.container{
+    border-radius: 50%;
+    min-width: 1in;
+    min-height: 1in;
+    width: 1in;
+    height: 1in;
+    background-color: #1c1d20;
+    color: white;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+@media only screen and (max-width: 1200px) {
     .first-nav{
-        display: none !important;
+        display: none;
     }
     .second-nav{
         display: flex;
-        height: fit-content;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+    }
+    .list-container{
+        width: 100%;
         position: absolute;
-        overflow-x: hidden;
-        width: 100vw;
-        height: 100vh;
         top: 0;
         left: 0;
+        background-color: rgb(0, 0, 0);
+        height: 100%;
+        left: calc(100vw + 140px);
     }
-    .second-menu-container{
-        width: 100vh;
-        height: 100vh;
-        min-height: 7.5in;
+    .fixed-nav-rounded-div{
+        cursor: auto;
+        box-sizing: border-box;
         position: absolute;
-        display: flex;
-        /* left: 60vw; */
-        background-color: black;
-        color: white;
+        left: 1px;
+        transform: translateX(-100%);
+        height: 100%;
         top: 0;
-        z-index: 3000;
-        transform: translateX(100vw);
-        align-items: center;
-    }
-    .second-menu-container ul{
-        display: flex;
-        flex-direction: column;
-        height: 60%;
-        font-size: 3rem;
-        margin: 0;
-        width: 40%;
-    }
-    .menu-btn span{
-        width: 30px;
-        height: .3px;
-        background: white;
-        display: block;
-        position: relative;
-        z-index: 5000;
-        top: 40px;
-        left: 89vw;
-        margin-bottom: 10px;
     }
     .rounded-div-wrapper{
-        /* overflow: hidden;
+      
+        cursor: auto;
+        --vh: 9.37px;
+        font-family: 'Dennis Sans', sans-serif;
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 450;
+        font-style: normal;
+        font-size: clamp(16px, 1.2vw, 19px);
+        box-sizing: border-box;
+        top: 0;
         position: relative;
-        left: -5%;
-        width: 100px;
+        overflow: hidden;
+        width: 6vw;
         height: 100%;
-        display: block; */
-        /* Dj */
-    pointer-events: all;
-    box-sizing: border-box;
-    width: 1000px !important;
-    top: -15px;
-    position: relative;
-    /* overflow-x: hidden; */
-    transform: translateY(-1px);
-    will-change: height;
-    height: 43px;
-    transform: rotate(90deg);
-    left: -400.5px;
+        will-change: width;
     }
     .rounded-div{
-        /* width: 10in;
-        margin: 0;
-        height: 100%;
-        border-radius: 50%;
-        background-color: rgb(255, 0, 0); */
-        pointer-events: all;
+      
         box-sizing: border-box;
-        width: 200%;
+        left: 50%;
+        z-index: 1;
+        background: black;
+        height: 150%;
         content: "";
         display: block;
         position: absolute;
-        background: rgb(0, 0, 0);
-        height: 750%;
-        left: 50%;
+        width: 775%;
+        top: 50%;
         border-radius: 50%;
-        transform: translate(-50%, -86.666%);
-        z-index: 1;
-         }
-
+        transform: translate(-6.5%, -50%);
+    }
+    .second-nav .logo{
+        width: 20%;
+        min-width: 150px;
+    }
+    .second-nav ul{
+        width: 60%;
+        height: 100%;   
+        font-size: 3rem;
+        list-style: none;
+        color: white;
+       
+    }
+    
+  }
+  @media only screen and (max-width: 687px) {
+ 
   }

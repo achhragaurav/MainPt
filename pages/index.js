@@ -16,12 +16,18 @@ import ContactHome from '../components/Contact/ContactHome'
 export default function Home() {
   const aboutRef = useRef(null);
   const aboutHeadingRef = useRef(null);
+  const lockScroll = (lock) =>{
+    if(lock){
 
+     return document.body.style.overflow = "hidden";
+    }
+    document.body.style.overflow = "scroll";
+  }
 
 
   return (
     <>
-    <Navbar color={"white"}/>
+    <Navbar color={"white"} lockScroll={lockScroll} />
     <Layout />
       <div className={styles["main"]}>
       </div>
