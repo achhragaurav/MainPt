@@ -22,15 +22,18 @@ const ContactHome = () => {
         <div className={styles["contact-first"]}>
             <div className={styles["first-one"]}>
                 <div className={styles["first-one-left"]}>
-                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <h1><span> Let's Work </span> Together</h1>
+                      <div className={styles["first-one-leftHeading"]}>
+                          <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                          <h1> Let's work</h1>
+                    </div>
+                    <h1>together</h1>
                 </div>
                 <div className={styles["first-one-right"]}>
                     <span><BsArrowDown /></span>
                 </div>
             </div>
             <div className={styles["first-two"]}>
-                <span></span>
+                <span className={styles['line2']}></span>
                 <BallElasticAnimComp styles={styles} title="Get in touch"/>
             </div>
             <div className={styles["first-three"]}>

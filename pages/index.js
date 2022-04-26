@@ -10,8 +10,8 @@ import {gsap} from 'gsap'
 import BallElasticAnimComp from '../components/AnimationComp/BallElasticAnimComp'
 import BigProjectList from '../components/Projects/BigProjectList'
 import AboutHome from '../components/About/AboutHome'
-import Collage from '../components/Collage/Collage'
 import ContactHome from '../components/Contact/ContactHome'
+import HomeSection from '../components/Home/HomeSection'
 
 export default function Home() {
   const aboutRef = useRef(null);
@@ -30,15 +30,13 @@ export default function Home() {
     <Navbar color={"white"} lockScroll={lockScroll} />
     <Layout />
       <div className={styles["main"]}>
+        <HomeSection/>
       </div>
       <AboutHome/>
       <div className={styles["main-projects"]}>
         <div className={styles["main-projects-container"]}>
           <BigProjectList/>
         </div>
-      </div>
-      <div className={styles["main-collage"]}>
-        <Collage/>
       </div>
       <div className={styles["main-contact"]}>
         <ContactHome/>

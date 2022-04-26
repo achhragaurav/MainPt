@@ -1,10 +1,10 @@
 .main{
     padding-top: 10vh;
     font-size: 10rem;
-    background: url("https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-position: center;
+    /* background: url("https://images.pexels.com/photos/1759531/pexels-photo-1759531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     height: 100vh;
     width: 100vw;
 }

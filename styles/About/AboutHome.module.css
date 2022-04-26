@@ -21,10 +21,17 @@
   flex-wrap: wrap;
   max-width: 7in;
 }
-.main-about-first p span {
-  margin: 3px;
+.main-about-first p .span-line {
+ overflow: hidden;
+ width: fit-content;
+ margin: 3.5px;
+ position: relative;
+ display: block;
 }
-
+.main-about-first p .span-line-inner {
+position: relative;
+display: block;
+}
 .main-about-second {
   width: 30%;
   display: block;
@@ -58,6 +65,10 @@
   }
 }
 /* Ball */
+.about-ball{
+  position: relative;
+  display: block;
+}
 .container {
   margin-top: 5rem;
   border-radius: 50%;

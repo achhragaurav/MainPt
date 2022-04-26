@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Layout from '../components/Layout';
-import styles from "../styles/Work/Work.module.css"
+import styles from "../styles/Work/Work.module.css";
+import ContactHome from "../components/Contact/ContactHome"
+
 
 const work = () => {
   return (
@@ -10,7 +12,10 @@ const work = () => {
     <Layout />
 <main className={styles["main"]}>
 Work Page
-</main></>
+      </main>
+    <ContactHome/>
+    
+    </>
   );
 }
 

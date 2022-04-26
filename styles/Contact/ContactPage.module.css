@@ -1,10 +1,10 @@
 .contact{
     width: 100%;
     max-height: 9.5in;
-    height: 100vh;
+    height: 9.5in;
     background-color: #1c1d20;
     color: white;
-    font-size: 15px;
+    font-size: calc(5px + .6vw);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,40 +13,49 @@
 .contact-first{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     min-width: 3in;
     height: 80%;
+    align-items: flex-start;
+    justify-content: center;
 }
 .contact-second{}
 .first-one{
     display: flex;
-    width: 80%;
-    height: 35%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    height: 33.33%;
+    height: 30%;
     
 }
 .first-one-left{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: 100%;
+    height: 60%;
+}
+.first-one-leftHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
 }
 .first-one-left h1{
-    font-size: 6em;
-    font-weight: 300;
+    font-size: 6.5em;
+    font-weight: 400;
     display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
-    width: 50%;
+    width: 90%;
 }
 .first-one-left img{
     border-radius: 50%;
-    width: 5vw;
-    height: 5vw;
+    width: calc(40px + 3vw);
+    height:calc(40px + 3vw);
     object-fit: cover;
+    margin-right: 30px;
 }
 .first-one-right span{
     transform: rotate(45deg);
@@ -59,23 +68,25 @@ display: block;
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 33.33%;
+    height: 33%;
+    width: 100%;
+    
 }
-.first-two span{
-width: 80%;
+.first-two .line2{
+width: 100%;
 height: .3px;
-background-color: white;
+background-color: rgb(83, 83, 83);
 display: block;
 }
 .first-two .container{
     position: absolute;
-    top: 20%;
+    top: 15%;
     margin: 0;
     left: 40vw;
 }
 .first-three{
     width: 100%;
-   height: 33.33%;
+   height: 10%;
 }
 .three-buttons{
     width: 100%;
@@ -90,12 +101,13 @@ display: block;
     color: white;
     border: 1px solid rgb(107, 107, 107);
     outline: none;
-    padding: 20px 40px;
-    border-radius: 2.1rem;
+    padding: 30px 60px;
+    border-radius: 2.4rem;
     font-size: 1rem;
     background-color: transparent;
     min-width: fit-content;
     margin-right:1rem ;
+        margin: 10px;
 }
 .contact-second{
     width: 100%;
@@ -141,8 +153,8 @@ display: block;
 .container{
     margin-top: 5rem;
     border-radius: 50%;
-    min-width: 1.8in;
-    min-height: 1.8in;
+    min-width: calc(1.2in + 3vw);
+    min-height: calc(1.2in + 3vw);  
     width: 1.8in;
     height: 1.8in;
     background-color: #455ce9;
@@ -157,7 +169,12 @@ display: block;
     font-size: 1.2rem;
     font-weight: 500;
 }
+@media only screen and (max-width: 800px) {
 
+    .contact-first{
+      justify-content: center;
+    }
+}
 @media only screen and (max-width: 857px) {
 
 .contact-sec-container{
@@ -165,6 +182,9 @@ display: block;
     }
 }
 @media only screen and (max-width: 600px) {
+.first-two .line2 {
+   display: none;
+}
     .contact-first{
         align-items: center;
         justify-content: center;
@@ -174,8 +194,8 @@ display: block;
       height: 50px;
     }
     .first-one-left h1{
-        font-size: 10vw;
-        font-weight: 300;
+        font-size: 6em;
+        font-weight: 400;
     }
     .first-two{
         align-items: center;
@@ -201,7 +221,7 @@ display: block;
     }
     .three-buttons button{
     
-        margin: 0;
+        margin: 10px;
     }
     .contact-sec-container{
         justify-content: center;

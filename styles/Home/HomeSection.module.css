@@ -1,0 +1,41 @@
+.home-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: calc(20px + 1vw);
+    color: white;
+}
+.home-heading{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    justify-content: center;
+    position: relative;
+        z-index: 30;
+}
+.home-heading h1{
+    font-size: 3em;
+    font-weight: 300;
+}
+.home-heading p {
+    padding-left: 10px;
+}
+.home-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    overflow: hidden;
+}
+.home-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

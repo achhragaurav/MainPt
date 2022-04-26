@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
+import { useEffect } from "react";
 const BallElasticAnimComp = ({
   children,
   styles,
@@ -7,6 +8,7 @@ const BallElasticAnimComp = ({
   className,
   navState
 }) => {
+ 
   const ballRef = useRef(null);
   const ballHeadingRef = useRef(null);
   const ballSpan = useRef(null);

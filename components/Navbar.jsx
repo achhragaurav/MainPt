@@ -24,7 +24,8 @@ const Navbar = ({ color, lockScroll }) => {
         overflow: "visible",
         delay: 0.2
       });
-      gsap.to(secondNav.current, { display: "flex" });
+      // gsap.to(secondNav.current, { display: "flex" });
+      // TEMP
     } else if (oldValue > newValue) {
       console.log("Down", window.innerWidth, scrollTop);
       if (scrollTop < 500 && window.innerWidth > 1200) {
@@ -34,7 +35,9 @@ const Navbar = ({ color, lockScroll }) => {
           delay: 0,
           ease: "power2.in"
         });
-        gsap.to(secondNav.current, { display: "none" });
+        // gsap.to(secondNav.current, { display: "none" });
+      // TEMP
+
       }
     }
     oldValue = newValue;
@@ -43,7 +46,7 @@ const Navbar = ({ color, lockScroll }) => {
     if (navState) {
       gsap.to(menuUl.current, { x: 0 });
       gsap.to(roundRef.current, { width: "120px" });
-      gsap.to(secondNav.current, { zIndex: 0, background: "transparent" });
+      gsap.to(secondNav.current, {zIndex: 0, background: "transparent" });
 
       gsap.to(secondNavMenuBtn.current.childNodes[0].childNodes[3], {
         y: "100%",
@@ -109,6 +112,18 @@ const Navbar = ({ color, lockScroll }) => {
         className={styles["menu-btn"]}
         onClick={navHandler}
         ref={secondNavMenuBtn}
+        onMouseMove={() => {
+          gsap.to(secondNav.current, {
+            display:"flex"
+          })
+        }}
+         onMouseLeave={() => {
+           if (!navState) {
+            gsap.to(secondNav.current, {
+            display:"none"
+          })
+          }
+        }}
       >
         <BallElasticAnimComp styles={styles} navState={navState}>
           <div className={styles["menuLineWrapper"]}>

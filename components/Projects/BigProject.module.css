@@ -28,10 +28,13 @@
     font-weight: 300;
     text-transform: uppercase;
     font-size: .8em;
+    padding-top: 20px;
 }
 .big-project ul li h1{
+    padding-top: 20px;
     font-size: 2em;
     font-weight: 300;
+    padding-bottom: 20px;
 }
 .big-project ul li span{
     width: 100%;
@@ -50,13 +53,47 @@ justify-content: space-between;
 }
 .big-project button{
     cursor: pointer;
-    border: 1px solid rgb(207, 207, 207);
+    border: none;
     outline: none;
-    padding: 1.5rem 2.5rem;
-    border-radius: 2.1rem;
     background-color: transparent;
     margin-top: 10vh;
+        margin-bottom: 2vh;
 }
+
+/* Ball */
+.container{
+    border-radius: 50px;
+    width: 2in;
+    height: 1in;
+    background-color: #1c1d20;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  
+}
+.container h5{
+    font-size: 1.3em;
+    font-weight: 300;
+    min-width: fit-content;
+    position: relative;
+    z-index: 200;
+    left: 75%;
+    top: 0;
+}
+.container span {
+    position: relative;
+    min-width: 3in;
+    height: 3in;
+    border-radius: 50%;
+    left: -3px;
+    z-index: 100;
+    background: rgb(0, 132, 255);
+    transform: translateY(100%);
+}
+
 @media only screen and (max-width: 1109px) {
     .big-project{
         font-size: 2vw;
