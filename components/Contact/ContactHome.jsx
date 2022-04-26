@@ -38,8 +38,12 @@ const ContactHome = () => {
             </div>
             <div className={styles["first-three"]}>
                 <div className={styles["three-buttons"]}>
-                    <button>achhragaurav@gmail.com</button>
-                    <button>+91 8468062832</button>
+                      <button>
+                <BallElasticAnimComp styles={styles} title="achhragaurav@gmail.com" className={`containerButton`}/>
+                          </button>
+                      <button>
+                <BallElasticAnimComp styles={styles} title="+91 8468062832" className={`containerButton`}/>
+                          </button>
                 </div>
             </div>
         </div>

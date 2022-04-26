@@ -25,6 +25,17 @@
 }
 .home-heading p {
     padding-left: 10px;
+    font-size: .9em;
+    font-weight: 300;
+    color: rgb(126, 126, 126);
+    padding-top: 20px;
+}
+.home-heading span{
+    margin-top: 30px;
+    width:60%;
+    height: .3px;
+    background-color: rgb(126, 126, 126);
+    display: block;
 }
 .home-img{
     width: 100%;

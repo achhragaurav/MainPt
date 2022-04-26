@@ -98,16 +98,11 @@ display: block;
 }
 .three-buttons button{
     cursor: pointer;
-    color: white;
-    border: 1px solid rgb(107, 107, 107);
+    border: none;
     outline: none;
-    padding: 30px 60px;
-    border-radius: 2.4rem;
-    font-size: 1rem;
     background-color: transparent;
-    min-width: fit-content;
     margin-right:1rem ;
-        margin: 10px;
+    margin: 10px;
 }
 .contact-second{
     width: 100%;
@@ -169,6 +164,41 @@ display: block;
     font-size: 1.2rem;
     font-weight: 500;
 }
+/* Buttons Ball */
+.containerButton {
+    border-radius: 50px;
+    width: 3in;
+    height: 1in;
+    background-color: #1c1d20;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(138, 138, 138);
+}
+
+.containerButton h5 {
+    font-size: 1.3em;
+    font-weight: 300;
+    min-width: fit-content;
+    position: relative;
+    z-index: 200;
+    left: 100%;
+    top: 0;
+}
+
+.containerButton span {
+    position: relative;
+    min-width: 6in;
+    height: 3in;
+    border-radius: 50%;
+    left: -3px;
+    z-index: 100;
+    background: rgb(0, 132, 255);
+    transform: translateY(100%);
+}
 @media only screen and (max-width: 800px) {
 
     .contact-first{
@@ -220,8 +250,7 @@ display: block;
         height: 100%;
     }
     .three-buttons button{
-    
-        margin: 10px;
+
     }
     .contact-sec-container{
         justify-content: center;

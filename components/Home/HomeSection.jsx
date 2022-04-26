@@ -34,7 +34,8 @@ const HomeSection = () => {
           </div>
           <div className={styles["home-heading"]}>
               <h1>Gaurav Achhra</h1>
-              <p>Freelance Devloper and Designer</p>
+              <p>Freelance Devloper & Designer</p>
+              <span></span>
             </div>
       </section>
   )
