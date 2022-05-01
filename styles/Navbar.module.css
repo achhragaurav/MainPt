@@ -85,7 +85,16 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-
+.containerLink span {
+  background-color: white;
+  min-width: 26px !important;
+  height: 5px;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+  left: -75%;
+  top: 40%;
+}
 .container h5 {
   font-size: 1.2rem;
   font-weight: 500;
@@ -118,6 +127,35 @@
 }
 .container .menuLine:first-of-type {
   margin-top: 10%;
+}
+/* Big Nav containerLinkBig */
+.containerLinkBig{
+  border-radius: 50%;
+  min-width: 1in;
+  min-height: 1in;
+
+  background-color: transparent;
+  color: white;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 300;
+  font-size: calc(1em + 15px);
+}
+.containerLinkBig h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.containerLinkBig span {
+  background-color: white;
+  min-width: 26px !important;
+  height: 5px;
+  display: block;
+  border-radius: 20px;
+  
 }
 /* Copied Styles from 1200 */
 .second-nav {

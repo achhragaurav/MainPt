@@ -3,13 +3,14 @@ import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
 import styles from "../styles/About/AboutPage.module.css"
 import ContactHome from "../components/Contact/ContactHome"
+import AboutPageLayout from '../components/About/AboutPageLayout';
 const About = () => {
   return (
     <>
     <Navbar color={"black"}/>
     <Layout />
 <main className={styles["main"]}>
-About Page
+      <AboutPageLayout/>
       </main>
     <ContactHome/>
     </>

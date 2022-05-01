@@ -1,0 +1,123 @@
+.about-page-layout{
+    width: 100vw;
+    height: 30in;
+    background-image: linear-gradient(0deg, #e0e0e0 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1.6vw + .3vh);
+}
+.about-page-container{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 100%;
+    padding-left: 7rem;
+}
+.hero-heading{
+    width: 75%;
+    height: 13%;
+    display: flex;
+    align-items: flex-end;
+}
+.hero-heading h1{
+    font-weight: 400;
+    font-size: 3.1em;
+}
+.earth-sec{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+
+}
+.earth-sec span{
+    width: 80%;
+    height: .3px;
+    background-color: rgb(212, 212, 212);
+    display: block;
+    position: relative;
+    z-index: 50;
+}
+.earth{
+    background-color: black;
+    border-radius: 50%;
+    height: calc(1.5in + 5vw);
+    width: calc(1.5in + 5vw);
+    position: relative;
+    z-index: 100;
+    left: -20%;
+}
+.desc-image{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+.desc-content{
+    width: 20%;
+}
+.desc-content p{
+    font-size: .5em;
+    line-height: 2rem;
+}
+.desc-content p:last-of-type {
+    color: rgb(148, 148, 148);
+}
+.desc-image-img{
+    width: 80%;
+    min-width: 2in;
+}
+.desc-image-img img{
+    width: 100%;
+    object-fit: cover;
+    padding-left: 50px;
+}
+.packages{
+    width: 100%;
+    height: 30%;
+   display: flex;
+   flex-direction: column;
+}
+.packages-heading{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.packages-heading h1{
+    font-weight: 400;
+    font-size: 1.9em;
+}
+.packages-content{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    flex-wrap: wrap;
+    
+}
+.pc-card{
+    min-width: 1.5in;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 70%;
+    margin: 1rem;
+}
+.pc-card p {
+    font-size: 15px;
+}
+.pc-card span{
+    display: block;
+    width: 100%;
+    height: .8px;
+    background-color: #bebebe;
+}
+
+.pc-card h1{
+    font-weight: 400;
+    font-size: 40px;
+}

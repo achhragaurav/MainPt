@@ -3,7 +3,14 @@ import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
 import BallElasticAnimComp from "./AnimationComp/BallElasticAnimComp";
 import { gsap } from "gsap";
-const Navbar = ({ color, lockScroll }) => {
+const Navbar = ({ color }) => {
+    const lockScroll = (lock) =>{
+    if(lock){
+
+     return document.body.style.overflow = "hidden";
+    }
+    document.body.style.overflow = "scroll";
+  }
   const menuUl = useRef(null);
   const roundRef = useRef(null);
   const logo = useRef(null);
@@ -100,6 +107,9 @@ const Navbar = ({ color, lockScroll }) => {
       lockScroll(true);
     }
   };
+  const navPageChange = () => {
+    lockScroll(false);
+  }
   useEffect(() => {
     window.addEventListener("scroll", navFunction);
     return () => {
@@ -125,7 +135,7 @@ const Navbar = ({ color, lockScroll }) => {
           }
         }}
       >
-        <BallElasticAnimComp styles={styles} navState={navState}>
+        <BallElasticAnimComp styles={styles} navState={navState} >
           <div className={styles["menuLineWrapper"]}>
             <div className={styles["menuLine"]}></div>
             <div className={styles["menuLine"]}></div>
@@ -143,8 +153,10 @@ const Navbar = ({ color, lockScroll }) => {
             <Link href="/about">
               <li>
                 <BallElasticAnimComp
+                  centerTwoStat={true}
+                  spanAnimDot={true}
                   styles={{
-                    ...styles
+                    ...styles,
                   }}
                   title={"About"}
                   className={"containerLink"}
@@ -154,6 +166,9 @@ const Navbar = ({ color, lockScroll }) => {
             <Link href="/work">
               <li>
                 <BallElasticAnimComp
+                  centerTwoStat={true}
+                  
+                  spanAnimDot={true}
                   styles={{
                     ...styles
                   }}
@@ -165,6 +180,9 @@ const Navbar = ({ color, lockScroll }) => {
             <Link href="/contact">
               <li>
                 <BallElasticAnimComp
+                  centerTwoStat={true}
+                  
+                  spanAnimDot={true}
                   styles={{
                     ...styles
                   }}
@@ -190,16 +208,48 @@ const Navbar = ({ color, lockScroll }) => {
             </div>
             <ul>
               <Link href="/">
-                <li>Home</li>
+                <li onClick={navPageChange}> <BallElasticAnimComp
+                  centerTwoStat={true}
+                  spanAnimDot={true}
+                  styles={{
+                    ...styles
+                  }}
+                  title={"Home"}
+                  className={"containerLinkBig"}
+                /></li>
               </Link>
               <Link href="/about">
-                <li>About</li>
+                <li onClick={navPageChange}><BallElasticAnimComp
+                  centerTwoStat={true}
+                  spanAnimDot={true}
+                  styles={{
+                    ...styles
+                  }}
+                  title={"About"}
+                  className={"containerLinkBig"}
+                /></li>
               </Link>
               <Link href="/work">
-                <li>Work</li>
+                <li onClick={navPageChange}><BallElasticAnimComp
+                  centerTwoStat={true}
+                  spanAnimDot={true}
+                  styles={{
+                    ...styles
+                  }}
+                  title={"Work"}
+                  className={"containerLinkBig"}
+                /></li>
               </Link>
               <Link href="/contact">
-                <li>Contact</li>
+                <li onClick={navPageChange}><BallElasticAnimComp
+                  centerTwoStat={true}
+                  spanAnimDot={true}
+                  styles={{
+                    ...styles
+                  }}
+                  title={"Contact"}
+                  className={"containerLinkBig"}
+                /></li>
               </Link>
             </ul>
             <div className={styles["nav-socials"]}>

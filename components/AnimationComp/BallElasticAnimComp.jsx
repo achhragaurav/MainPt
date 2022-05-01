@@ -6,7 +6,9 @@ const BallElasticAnimComp = ({
   styles,
   title,
   className,
-  navState
+  navState,
+  centerTwoStat,
+  spanAnimDot
 }) => {
  
   const ballRef = useRef(null);
@@ -18,29 +20,39 @@ const BallElasticAnimComp = ({
       ref={ballRef}
       onMouseMove={e => {
         let rect = ballRef.current.getBoundingClientRect();
-        const center = (rect.right - rect.left) / 2;
-
-        console.log(center);
+        const center = centerTwoStat ? centerTwoStat && -(rect.top - rect.bottom)/2 :  (rect.right - rect.left) / 2;
         let x = e.clientX - rect.left; //x position within the element.
         let y = e.clientY - rect.top; //y position within the element.
-        //  console.log(x,y);
+        const divideValue = centerTwoStat ? 4 : 2
+         console.log(x-divideValue);
         gsap.to(ballRef.current, {
           x: Math.floor(x - center),
           y: Math.floor(y - center)
         });
         if (!title) {
           return gsap.to(ballRef.current.childNodes[0], {
-            x: Math.floor((x - center) / 2),
-            y: Math.floor((y - center) / 2)
+            x: Math.floor((x - center) / divideValue),
+            y: Math.floor((y - center) / divideValue)
           });
         }
         gsap.to(ballHeadingRef.current, {
-          x: Math.floor((x - center) / 2),
-          y: Math.floor((y - center) / 2)
+          x: Math.floor((x - center) / divideValue),
+          y: Math.floor((y - center) / divideValue)
         });
       }}
       onMouseEnter={e => {
         if (!navState) {
+          if (spanAnimDot) {
+            gsap.fromTo(ballSpan.current,
+              {
+            opacity:0,
+          },
+              {
+                opacity: 1,
+            duration: ".3s"
+              });
+            return
+          }
           gsap.to(ballSpan.current, {
             y: -23,
             duration: 1
@@ -55,6 +67,13 @@ const BallElasticAnimComp = ({
           ease: "elastic.out(2, 1)"
         });
         if (!navState) {
+          if (spanAnimDot) {
+            gsap.to(ballSpan.current, {
+              ease: "power2.out",
+              opacity: 0,
+               duration: .5
+            })
+          }
           gsap.to(ballSpan.current, {
             y: "100%",
             duration: 1

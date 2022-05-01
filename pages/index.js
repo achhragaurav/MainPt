@@ -16,18 +16,9 @@ import HomeSection from '../components/Home/HomeSection'
 export default function Home() {
   const aboutRef = useRef(null);
   const aboutHeadingRef = useRef(null);
-  const lockScroll = (lock) =>{
-    if(lock){
-
-     return document.body.style.overflow = "hidden";
-    }
-    document.body.style.overflow = "scroll";
-  }
-
-
   return (
     <>
-    <Navbar color={"white"} lockScroll={lockScroll} />
+    <Navbar color={"white"} />
     <Layout />
       <div className={styles["main"]}>
         <HomeSection/>
