@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Layout from '../components/Layout';
 import styles from "../styles/Work/Work.module.css";
 import ContactHome from "../components/Contact/ContactHome"
+import WorkPageLayout from '../components/Projects/WorkPageLayout';
 
 
 const work = () => {
@@ -11,7 +12,7 @@ const work = () => {
     <Navbar color={"black"}/>
     <Layout />
 <main className={styles["main"]}>
-Work Page
+    <WorkPageLayout/>
       </main>
     <ContactHome/>
     
