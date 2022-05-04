@@ -7,7 +7,7 @@ const ContactPage = () => {
           <div className={classes["contact-main-container"]}>
         <div className={classes["contact-heading"]}>
           <div className={classes["contact-heading-content"]}>
-            <h1>Let's start a</h1>
+            <h1>Let&apos;s start a</h1>
           <h1>project together</h1>
           </div>
           <div className={classes["contact-heading-image"]}>
@@ -30,7 +30,7 @@ const ContactPage = () => {
                 <span></span>
                 <div className={classes["form-part-2"]}>
                   <p>02</p>
-                  <label htmlFor="">What's your email?</label>
+                  <label htmlFor="">What&apos;s your email?</label>
                 </div>
                 <input type="text" placeholder='abc@gmail.com'/>
               </div>
@@ -38,7 +38,7 @@ const ContactPage = () => {
                 <span></span>
                 <div className={classes["form-part-3"]}>
                   <p>03</p>
-                  <label htmlFor="">What's the name of your organization?</label>
+                  <label htmlFor="">What&apos;s the name of your organization?</label>
                 </div>
                 <input type="text" placeholder='John & Doe'/>
               </div>

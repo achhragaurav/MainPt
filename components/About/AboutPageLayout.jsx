@@ -2,6 +2,14 @@ import React from 'react'
 import classes from "../../styles/About/AboutPageLayout.module.css";
 
 const AboutPageLayout = () => {
+  const para1 = `With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs.
+              Solid company branding is the foundation of any succesful website.`;
+  const para2 = `I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations,
+                transitions and interaction. F this
+                or content management I use Kirby CMS.`;
+  const para3=`A complete website from concept to implementation,
+              that's what makes me stand out. My great sense for design and my
+                development skills enable me to create kick-ass projects.`
   return (
     <section className={classes["about-page-layout"]}>
       <div className={classes["about-page-container"]}>
@@ -31,25 +39,19 @@ const AboutPageLayout = () => {
             <p>01</p>
             <span></span>
             <h1>Design</h1>
-            <p>With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs.
-              Solid company branding is the foundation of any succesful website.</p>
+              <p>{ para1}</p>
           </div>
            <div className={classes["pc-card"]}>
             <p>01</p>
             <span></span>
             <h1>Development</h1>
-            <p>I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations,
-                transitions and interaction. F this
-                or content management I use Kirby CMS.</p>
+              <p>{ para2}</p>
           </div>
            <div className={classes["pc-card"]}>
             <p>01</p>
             <span></span>
             <h1>* The full package</h1>
-            <p>A complete website from concept to implementation,
-              that's what makes me stand out. My great sense for design and my
-                development skills enable me to create kick-ass projects.
-               
+            <p>{para3}
               </p>
           </div>
         </div>
