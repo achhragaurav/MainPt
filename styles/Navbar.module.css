@@ -14,7 +14,7 @@
   position: relative;
 }
 .list-container {
-  width: 35%;
+  width: 18%;
 }
 .first-nav ul {
   display: flex;
@@ -73,7 +73,6 @@
   height: 0.5in;
   background-color: transparent;
   color: white;
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,6 +93,7 @@
   position: relative;
   left: -75%;
   top: 40%;
+  opacity: 0;
 }
 .container h5 {
   font-size: 1.2rem;
@@ -122,7 +122,7 @@
   display: flex;
   height: 1px;
   margin: 3px;
-  background: white;
+  background: rgb(255, 255, 255);
   z-index: 300;
 }
 .container .menuLine:first-of-type {
@@ -133,7 +133,6 @@
   border-radius: 50%;
   min-width: 1in;
   min-height: 1in;
-
   background-color: transparent;
   color: white;
   display: block;
@@ -155,6 +154,8 @@
   height: 5px;
   display: block;
   border-radius: 20px;
+  opacity: 0;
+  margin-left: 50px;
   
 }
 /* Copied Styles from 1200 */

@@ -11,7 +11,6 @@ const AboutHome = () => {
   useEffect(() => {
     let delayTimer = `${0.03}`;
     [...mainAboutFirst.current.children].forEach(element => {
-      console.log(element.children[0])
       gsap.fromTo(element.children[0],{  y: 100,}, {
         y: 0,
         ease: "none",

@@ -33,8 +33,8 @@ const HomeSection = () => {
                   alt="" />
           </div>
           <div className={styles["home-heading"]}>
-              <h1>Gaurav Achhra</h1>
               <p>Freelance Devloper & Designer</p>
+              <h1>Gaurav Achhra</h1>
               <span></span>
             </div>
       </section>

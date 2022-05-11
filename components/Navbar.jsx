@@ -4,6 +4,29 @@ import styles from "../styles/Navbar.module.css";
 import BallElasticAnimComp from "./AnimationComp/BallElasticAnimComp";
 import { gsap } from "gsap";
 const Navbar = ({ color }) => {
+  const colorChange = (e, back) => {
+    if (back) {
+      return gsap.to(menuUl.current,{backgroundColor:"#1c1d10"})
+    }
+    if (e.target.textContent === "Home"
+    || (e.target.closest("h5") && e.target.closest("h5").textContent === "Home")) {
+      return gsap.to(menuUl.current,{backgroundColor:"#160000"})
+    }
+    if (e.target.textContent === "About"
+    || (e.target.closest("h5") && e.target.closest("h5").textContent === "About")) {
+        console.log("I happened");
+      return gsap.to(menuUl.current,{backgroundColor:"#002705"})
+    }
+    if (e.target.textContent === "Work"
+      || (e.target.closest("h5") && e.target.closest("h5").textContent === "Work")) {
+      return gsap.to(menuUl.current,{backgroundColor:"#000727"})
+    }
+    if (e.target.textContent === "Contact"
+      || (e.target.closest("h5") && e.target.closest("h5").textContent === "Contact")) {
+      return gsap.to(menuUl.current,{backgroundColor:"rgb(0, 30, 34)"})
+    }
+    
+  }
     const lockScroll = (lock) =>{
     if(lock){
 
@@ -208,7 +231,9 @@ const Navbar = ({ color }) => {
             </div>
             <ul>
               <Link href="/">
-                <li onClick={navPageChange}> <BallElasticAnimComp
+                <li onMouseLeave={(e) => {
+                  colorChange(e,true)
+                }} onMouseMove={colorChange} onClick={navPageChange}> <BallElasticAnimComp
                   centerTwoStat={true}
                   spanAnimDot={true}
                   styles={{
@@ -219,7 +244,9 @@ const Navbar = ({ color }) => {
                 /></li>
               </Link>
               <Link href="/about">
-                <li onClick={navPageChange}><BallElasticAnimComp
+                <li onMouseLeave={(e) => {
+                  colorChange(e,true)
+                }} onMouseMove={colorChange} onClick={navPageChange}><BallElasticAnimComp
                   centerTwoStat={true}
                   spanAnimDot={true}
                   styles={{
@@ -230,7 +257,9 @@ const Navbar = ({ color }) => {
                 /></li>
               </Link>
               <Link href="/work">
-                <li onClick={navPageChange}><BallElasticAnimComp
+                <li onMouseLeave={(e) => {
+                  colorChange(e,true)
+                }} onMouseMove={colorChange} onClick={navPageChange}><BallElasticAnimComp
                   centerTwoStat={true}
                   spanAnimDot={true}
                   styles={{
@@ -241,7 +270,9 @@ const Navbar = ({ color }) => {
                 /></li>
               </Link>
               <Link href="/contact">
-                <li onClick={navPageChange}><BallElasticAnimComp
+                <li onMouseLeave={(e) => {
+                  colorChange(e,true)
+                }} onMouseMove={colorChange} onClick={navPageChange}><BallElasticAnimComp
                   centerTwoStat={true}
                   spanAnimDot={true}
                   styles={{

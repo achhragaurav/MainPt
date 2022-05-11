@@ -107,7 +107,7 @@ const Layout = ({children}) => {
     onAnimationComplete={() => {
       setTimeout(() => {
         setDisplay("hidden");
-        console.log("hello");
+        ("hello");
       },300)
     }}
   />

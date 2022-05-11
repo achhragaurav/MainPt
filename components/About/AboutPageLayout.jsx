@@ -19,11 +19,24 @@ const AboutPageLayout = () => {
       </div>
       <div className={classes["earth-sec"]}>
         <span></span>
-        <div className={classes["earth"]}></div>
+          <div className={classes["earth"]}>
+            <div className={classes["globe"]}>
+                  <div className={classes["overlay"]}></div>
+                  <div className={classes["globe"]}>
+                     <div className={classes["globe-wrap"]}>
+                        <div className={classes["circle"]}></div>
+                        <div className={classes["circle"]}></div>
+                        <div className={classes["circle"]}></div>
+                        <div className={classes["circle-hor"]}></div>
+                        <div className={classes["circle-hor-middle"]}></div>
+                     </div>
+                  </div>
+                  </div>
+        </div>
       </div>
       <div className={classes["desc-image"]}>
         <div className={classes["desc-content"]}>
-          <p>I help companies from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.</p>
+          <p> This world I help companies from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.</p>
           <p>Always Exploring ...</p>
         </div>
         <div className={classes["desc-image-img"]}>

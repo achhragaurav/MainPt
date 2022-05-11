@@ -43,8 +43,8 @@
 .earth{
     background-color: black;
     border-radius: 50%;
-    height: calc(1.5in + 5vw);
-    width: calc(1.5in + 5vw);
+    height: 11vw;
+    width:  11vw;
     position: relative;
     z-index: 100;
     left: -20%;
@@ -120,4 +120,381 @@
 .pc-card h1{
     font-weight: 400;
     font-size: 40px;
+}
+/* Extenal Globe Styles */
+
+
+.overlay{
+        -webkit-text-size-adjust: 100%;
+        --color-dark: #1C1D20;
+        --color-dark-dark: #141517;
+        --color-light: #FFFFFF;
+        --color-blue: #455CE9;
+        --color-blue-dark: #334BD3;
+        --color-gray: #999D9E;
+        --color-lightgray: #E9EAEB;
+        --color-white: #FFFFFF;
+        --color-border: rgba(28, 29, 32, 0.175);
+        --color-border-solid: #D2D2D2;
+        --color-border-light: rgba(255, 255, 255, 0.2);
+        --color-border-solid-light: #545557;
+        --color-text: #1C1D20;
+        --color-text-light: #FFF;
+        --alert-error: #ff4444;
+        --alert-success: #24C958;
+        --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+        --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+        --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
+        --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+        --section-padding: clamp(5em, 21vh, 12em);
+        --container-padding: clamp(2.5em, 8vw, 8em);
+        --gap-padding: clamp(1.5em, 4vw, 2.5em);
+        --vh: 9.32px;
+        cursor: auto;
+        font-family: 'Dennis Sans',
+        sans-serif;
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 450;
+        font-style: normal;
+        font-size: clamp(16px, 1.2vw, 19px);
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        animation: digitalball 6s ease-in-out infinite;
+}
+.globe{
+        -webkit-text-size-adjust: 100%;
+        --color-dark: #1C1D20;
+        --color-dark-dark: #141517;
+        --color-light: #FFFFFF;
+        --color-blue: #455CE9;
+        --color-blue-dark: #334BD3;
+        --color-gray: #999D9E;
+        --color-lightgray: #E9EAEB;
+        --color-white: #FFFFFF;
+        --color-border: rgba(28, 29, 32, 0.175);
+        --color-border-solid: #D2D2D2;
+        --color-border-light: rgba(255, 255, 255, 0.2);
+        --color-border-solid-light: #545557;
+        --color-text: #1C1D20;
+        --color-text-light: #FFF;
+        --alert-error: #ff4444;
+        --alert-success: #24C958;
+        --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+        --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+        --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
+        --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+        --section-padding: clamp(5em, 21vh, 12em);
+        --container-padding: clamp(2.5em, 8vw, 8em);
+        --gap-padding: clamp(1.5em, 4vw, 2.5em);
+        --vh: 9.32px;
+        cursor: auto;
+        font-family: 'Dennis Sans',
+        sans-serif;
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 450;
+        font-style: normal;
+        font-size: clamp(16px, 1.2vw, 19px);
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3em;
+        height: 3em;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        overflow: hidden;
+        will-change: transform;
+}
+.globe-wrap{
+        -webkit-text-size-adjust: 100%;
+        --color-dark: #1C1D20;
+        --color-dark-dark: #141517;
+        --color-light: #FFFFFF;
+        --color-blue: #455CE9;
+        --color-blue-dark: #334BD3;
+        --color-gray: #999D9E;
+        --color-lightgray: #E9EAEB;
+        --color-white: #FFFFFF;
+        --color-border: rgba(28, 29, 32, 0.175);
+        --color-border-solid: #D2D2D2;
+        --color-border-light: rgba(255, 255, 255, 0.2);
+        --color-border-solid-light: #545557;
+        --color-text: #1C1D20;
+        --color-text-light: #FFF;
+        --alert-error: #ff4444;
+        --alert-success: #24C958;
+        --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+        --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+        --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
+        --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+        --section-padding: clamp(5em, 21vh, 12em);
+        --container-padding: clamp(2.5em, 8vw, 8em);
+        --gap-padding: clamp(1.5em, 4vw, 2.5em);
+        --vh: 9.32px;
+        cursor: auto;
+        font-family: 'Dennis Sans',
+        sans-serif;
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 450;
+        font-style: normal;
+        font-size: clamp(16px, 1.2vw, 19px);
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) rotate(30deg);
+        animation: globe 5.4s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+        overflow: hidden;
+        box-shadow: inset 0px 0px 0px .125em var(--color-white);
+        animation-delay: -1.8s;
+}
+.circle{
+        -webkit-text-size-adjust: 100%;
+        --color-dark: #1C1D20;
+        --color-dark-dark: #141517;
+        --color-light: #FFFFFF;
+        --color-blue: #455CE9;
+        --color-blue-dark: #334BD3;
+        --color-gray: #999D9E;
+        --color-lightgray: #E9EAEB;
+        --color-white: #FFFFFF;
+        --color-border: rgba(28, 29, 32, 0.175);
+        --color-border-solid: #D2D2D2;
+        --color-border-light: rgba(255, 255, 255, 0.2);
+        --color-border-solid-light: #545557;
+        --color-text: #1C1D20;
+        --color-text-light: #FFF;
+        --alert-error: #ff4444;
+        --alert-success: #24C958;
+        --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+        --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+        --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
+        --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+        --section-padding: clamp(5em, 21vh, 12em);
+        --container-padding: clamp(2.5em, 8vw, 8em);
+        --gap-padding: clamp(1.5em, 4vw, 2.5em);
+        --vh: 9.32px;
+        cursor: auto;
+        font-family: 'Dennis Sans',
+        sans-serif;
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 450;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        box-shadow: inset .1em 0px 0px .08em var(--color-white);
+        animation: circle1 2.7s linear infinite;
+        font-size: .75em;
+       
+}
+.circle:nth-of-type(1){
+animation-delay: -1.8s;
+}
+.circle:nth-of-type(2) {
+    animation-delay: -0.9s;
+}
+.circle-hor{
+        -webkit-text-size-adjust: 100%;
+        --color-dark: #1C1D20;
+        --color-dark-dark: #141517;
+        --color-light: #FFFFFF;
+        --color-blue: #455CE9;
+        --color-blue-dark: #334BD3;
+        --color-gray: #999D9E;
+        --color-lightgray: #E9EAEB;
+        --color-white: #FFFFFF;
+        --color-border: rgba(28, 29, 32, 0.175);
+        --color-border-solid: #D2D2D2;
+        --color-border-light: rgba(255, 255, 255, 0.2);
+        --color-border-solid-light: #545557;
+        --color-text: #1C1D20;
+        --color-text-light: #FFF;
+        --alert-error: #ff4444;
+        --alert-success: #24C958;
+        --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+        --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+        --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
+        --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+        --section-padding: clamp(5em, 21vh, 12em);
+        --container-padding: clamp(2.5em, 8vw, 8em);
+        --gap-padding: clamp(1.5em, 4vw, 2.5em);
+        --vh: 9.32px;
+        cursor: auto;
+        font-family: 'Dennis Sans',
+        sans-serif;
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 450;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 55%;
+        box-shadow: inset 0px 0px 0px .15em var(--color-white);
+        font-size: .75em;
+}
+.circle-hor-middle{
+        -webkit-text-size-adjust: 100%;
+        --color-dark: #1C1D20;
+        --color-dark-dark: #141517;
+        --color-light: #FFFFFF;
+        --color-blue: #455CE9;
+        --color-blue-dark: #334BD3;
+        --color-gray: #999D9E;
+        --color-lightgray: #E9EAEB;
+        --color-white: #FFFFFF;
+        --color-border: rgba(28, 29, 32, 0.175);
+        --color-border-solid: #D2D2D2;
+        --color-border-light: rgba(255, 255, 255, 0.2);
+        --color-border-solid-light: #545557;
+        --color-text: #1C1D20;
+        --color-text-light: #FFF;
+        --alert-error: #ff4444;
+        --alert-success: #24C958;
+        --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+        --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+        --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
+        --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+        --section-padding: clamp(5em, 21vh, 12em);
+        --container-padding: clamp(2.5em, 8vw, 8em);
+        --gap-padding: clamp(1.5em, 4vw, 2.5em);
+        --vh: 9.32px;
+        cursor: auto;
+        font-family: 'Dennis Sans',
+        sans-serif;
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 450;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        transform: translate(-50%, -50%);
+        border-radius: 0%;
+        height: .15em;
+        background: var(--color-white);
+        font-size: .75em;
+}
+@keyframes globe {
+    0% {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+    
+    50% {
+        transform: translate(-50%, -50%) rotate(-15deg);
+    }
+    
+    100% {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+}
+
+@keyframes circle1 {
+0%{
+    border-radius: 50%;
+    box-shadow: inset 0.1em 0px 0px 0.08em var(--color-white);
+    width: 100%;
+}
+
+49% {
+    border-radius: 50%;
+    box-shadow: inset 0.1em 0px 0px 0.08em var(--color-white);
+    background: transparent;
+}
+
+50% {
+    border-radius: 0%;
+    width: 0.175em;
+    background: var(--color-white);
+}
+
+51% {
+    border-radius: 50%;
+    box-shadow: inset -0.1em 0px 0px 0.08em var(--color-white);
+    background: transparent;
+}
+
+100% {
+    border-radius: 50%;
+    box-shadow: inset -0.1em 0px 0px 0.08em var(--color-white);
+    width: 100%;
+}
+}
+@media only screen and (max-width: 1109px) {
+    .about-page-layout{
+        height: 20in;
+    }
+.about-page-container {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: 100%;
+        padding-left: 0;
+    }
+    .hero-heading{
+        height: 2in;
+        width: 80vw;
+    }
+        .earth-sec {
+            height: 8%;
+        }
+        .desc-image{
+            height: 20%;
+            flex-direction: column;
+        }
+        .desc-content{
+            width: 100%;
+            font-size: 2em;
+        }
+        .packages{
+            height: 30%;
+        }
+        .packages-heading {
+            width: 100%;
+            height: 10%;
+        }
+        .packages-content {
+            height: 90%;
+            width: 100%;
+        }
+        .pc-card{
+            align-items: center;
+            width: 100%;
+            height: 55%;
+        }
+                .pc-card h1{
+                    width: max-content;
+                }
 }

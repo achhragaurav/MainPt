@@ -89,7 +89,7 @@ font-size: calc(5px + 1vw);
 .containerTwo {
     border-radius: 50px;
     width: 1.5in;
-    height: 1in;
+    height: .8in;
     background-color: #1c1d20;
     color: white;
     display: flex;

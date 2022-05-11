@@ -231,6 +231,7 @@ display: block;
         align-items: center;
         justify-content: center;
         width: 100%;
+        height: 25%;
     }
     .first-two .container{
         position: absolute;
@@ -241,6 +242,8 @@ display: block;
     .first-three{
         align-items: center;
         justify-content: center;
+        width: 100%;
+        height: 20%;
     }
     .three-buttons{
         align-items: center;
@@ -250,7 +253,6 @@ display: block;
         height: 100%;
     }
     .three-buttons button{
-
     }
     .contact-sec-container{
         justify-content: center;
