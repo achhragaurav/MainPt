@@ -1,3 +1,4 @@
+
 .work-page-layout{
 width: 100vw;
 height: 28in;
@@ -5,7 +6,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-font-size: calc(5px + 1vw);
+font-size: calc(1px + 1.2vw);
 }
 .work-page-container{
     width: 80%;
@@ -29,27 +30,7 @@ font-size: calc(5px + 1vw);
     padding-left: 5rem;
     height: 10%;
 }
-.buttons-left{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.buttons-left button{
-    border: none;
-    outline: none;
-    background-color: transparent;
-}
-.buttons-right {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 8em;
-    
-}
 
-.buttons-right button {}
 /* Ball One */
 .container {
     border-radius: 50px;
@@ -100,7 +81,7 @@ font-size: calc(5px + 1vw);
 }
 
 .containerTwo h5 {
-    font-size: .7em;
+    font-size: 14px;
     font-weight: 300;
     min-width: fit-content;
     position: relative;
@@ -118,6 +99,21 @@ font-size: calc(5px + 1vw);
     z-index: 100;
     background: rgb(0, 132, 255);
     transform: translateY(100%);
+}
+/* Work page buttons */
+.work-page-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-left: 10vw;
+    margin-top: 80px;
+}
+.work-page-buttons button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+
 }
 /* work-page-projects */
 .work-page-projects{
@@ -150,5 +146,33 @@ font-size: calc(5px + 1vw);
 }
 .work-page-projects ul li .cat p{}
 .work-page-projects img{
-    width: 700px;
+    width: 100%;
+}
+@media only screen and (max-width: 1321px) {
+   .work-page-layout{
+       height: max-content;
+       overflow: hidden;
+   }
+         .work-page-container {
+             width: 90%;
+             height: 100%;
+         }
+                  .work-page-heading {
+                      margin-top: 80px;
+                      padding-left: 10vw;
+                  }
+                 
+   .work-page-projects {
+    margin-top: 80px;
+       height: 75%;
+   }
+          .work-page-projects ul{
+                height:100%;
+        align-items: center;
+            justify-content: center;
+          }
+                        .work-page-projects ul li{
+                            min-width: 3in;
+                            width: 80%;
+                        }
 }

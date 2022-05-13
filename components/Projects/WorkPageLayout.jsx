@@ -15,13 +15,19 @@ const WorkPageLayout = () => {
                       <button className={classes["design-button"]}>
                           <BallElasticAnimComp centerTwoStat={true} title="Development" styles={classes}/>
                       </button>
-                      <button className={classes["dev-button"]}>
+                      
+          </div>
+          <div className={classes["button-middle"]}>
+            <button className={classes["dev-button"]}>
                           <BallElasticAnimComp centerTwoStat={true} title="Design" styles={classes}/>
                       </button>
-                  </div>
-                  <div className={classes["buttons-right"]}>
+          </div>
+          <div className={classes["buttons-right"]}>
+            <button className={classes["dev-button"]}>
                       <BallElasticAnimComp centerTwoStat={true} title="All" styles={classes} className={`containerTwo`}/>
-                  </div>
+                      </button>
+                 
+          </div>
               </div>
               <div className={classes["work-page-projects"]}>
                   <ul>
