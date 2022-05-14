@@ -21,7 +21,6 @@ const HomeSection = () => {
             start: "0 top", // the default values
             end: "1000 top",
             scrub: true,
-            markers:true
         }, 
 });
     },[])

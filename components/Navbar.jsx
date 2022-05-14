@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
+
 import BallElasticAnimComp from "./AnimationComp/BallElasticAnimComp";
 import { gsap } from "gsap";
-const Navbar = ({ color }) => {
+const Navbar = ({ colorFirstNav }) => {
   const colorChange = (e, back) => {
     if (back) {
       return gsap.to(menuUl.current,{backgroundColor:"#1c1d10"})
@@ -14,7 +15,6 @@ const Navbar = ({ color }) => {
     }
     if (e.target.textContent === "About"
     || (e.target.closest("h5") && e.target.closest("h5").textContent === "About")) {
-        console.log("I happened");
       return gsap.to(menuUl.current,{backgroundColor:"#002705"})
     }
     if (e.target.textContent === "Work"
@@ -43,11 +43,29 @@ const Navbar = ({ color }) => {
 
   let oldValue = 0;
   let newValue = 0;
+
+  const navBack = (e) => {
+
+    if (e.target.classList[0] === styles["second-nav"]) {
+      setNavstate(false)
+      navHandler()
+    }
+        }
+  useEffect(() => {
+    if (navState) {
+      document.addEventListener("click",navBack) 
+    }
+    return () => {
+      document.removeEventListener("click", navBack)
+    }
+  }, [navState])
+  useEffect(() => {
+    document.querySelector("ul").style.color=`${colorFirstNav}`
+  },[])
   const navFunction = e => {
     newValue = window.pageYOffset;
     var scrollTop = document.documentElement.scrollTop;
     if (oldValue < newValue) {
-      console.log("Up", scrollTop);
       gsap.to(secondNavMenuBtn.current, {
         ease: "power2.out",
         transform: `scale(1)`,
@@ -57,7 +75,6 @@ const Navbar = ({ color }) => {
       // gsap.to(secondNav.current, { display: "flex" });
       // TEMP
     } else if (oldValue > newValue) {
-      console.log("Down", window.innerWidth, scrollTop);
       if (scrollTop < 500 && window.innerWidth > 1200) {
         gsap.to(secondNavMenuBtn.current, {
           overflow: "hidden",
@@ -100,7 +117,6 @@ const Navbar = ({ color }) => {
       setNavstate(false);
       lockScroll(false);
     } else {
-      console.log(window.innerWidth);
       if (window.innerWidth < 900) {
         gsap.to(menuUl.current, { x: -500 });
       } else {
@@ -131,6 +147,8 @@ const Navbar = ({ color }) => {
     }
   };
   const navPageChange = () => {
+    setNavstate(false)
+    navHandler()
     lockScroll(false);
   }
   useEffect(() => {
@@ -167,12 +185,12 @@ const Navbar = ({ color }) => {
       </div>
       <div className={styles["first-nav"]}>
         <div className={styles["logo"]}>
-          <p ref={logo}>
+          <p ref={logo} style={{color:`${colorFirstNav}`}}>
             <Link href="/">@Code by Gaurav</Link>
           </p>
         </div>
         <div className={styles["list-container"]}>
-          <ul>
+          <ul >
             <Link href="/about">
               <li>
                 <BallElasticAnimComp

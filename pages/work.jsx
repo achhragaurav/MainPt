@@ -9,7 +9,7 @@ import WorkPageLayout from '../components/Projects/WorkPageLayout';
 const work = () => {
   return (
     <>
-    <Navbar color={"black"}/>
+    <Navbar colorFirstNav={"black"}/>
     <Layout />
 <main className={styles["main"]}>
     <WorkPageLayout/>

@@ -18,7 +18,7 @@ export default function Home() {
   const aboutHeadingRef = useRef(null);
   return (
     <>
-    <Navbar color={"white"} />
+    <Navbar colorFirstNav={"white"} />
     <Layout />
       <div className={styles["main"]}>
         <HomeSection/>

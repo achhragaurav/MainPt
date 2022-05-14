@@ -7,7 +7,7 @@ import AboutPageLayout from '../components/About/AboutPageLayout';
 const About = () => {
   return (
     <>
-    <Navbar color={"black"}/>
+    <Navbar colorFirstNav={"black"}/>
     <Layout />
 <main className={styles["main"]}>
       <AboutPageLayout/>

@@ -8,7 +8,7 @@ import ContactPage from '../components/Contact/ContactPage';
 const Contact = () => {
   return (
     <>
-    <Navbar color={"white"}/>
+    <Navbar colorFirstNav={"white"}/>
     <Layout />
     <main className={styles["main"]}>
       <ContactPage/>

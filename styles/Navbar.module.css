@@ -23,7 +23,9 @@
   align-items: center;
   justify-content: space-around;
 }
-
+/* .first-nav ul li{
+  color: blue;
+} */
 .first-nav .logo {
   width: 20%;
   padding-left: 50px;
@@ -72,7 +74,7 @@
   width: 0.5in;
   height: 0.5in;
   background-color: transparent;
-  color: white;
+  color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +87,7 @@
   font-weight: 400;
 }
 .containerLink span {
-  background-color: white;
+  background-color: rgb(122, 122, 122);
   min-width: 26px !important;
   height: 5px;
   display: block;
@@ -247,7 +249,8 @@
   height: 1px;
   display: block;
   background-color: #848586;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .second-nav ul {
   width: 60%;
@@ -284,7 +287,9 @@
   list-style: none;
   color: white;
 }
-
+.nav-socials ol li{
+padding-right: 20px;
+}
 @media only screen and (max-width: 1200px) {
   .menu-btn {
     transform: scale(1);

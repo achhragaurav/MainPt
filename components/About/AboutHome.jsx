@@ -112,7 +112,7 @@ const AboutHome = () => {
           me in a unique place in the web design world.
         </p>
         <div className={styles["about-ball"]} ref={aboutBallRef}>
-          <BallElasticAnimComp styles={styles} title="About" />
+          <BallElasticAnimComp link={"/about"} styles={styles} title="About" />
         </div>
       </div>
     </section>

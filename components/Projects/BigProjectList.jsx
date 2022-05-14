@@ -36,7 +36,7 @@ const BigProjectList = () => {
         </div>
       </li>
     </ul>
-    <button><BallElasticAnimComp centerTwoStat={true} styles={classes} title="More Work" /></button>
+    <button><BallElasticAnimComp link="/work" centerTwoStat={true} styles={classes} title="More Work" /></button>
     </section>
 }
 

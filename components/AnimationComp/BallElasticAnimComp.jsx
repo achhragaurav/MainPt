@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useEffect } from "react";
+import Link from "next/link";
 const BallElasticAnimComp = ({
   children,
   styles,
@@ -8,14 +9,14 @@ const BallElasticAnimComp = ({
   className,
   navState,
   centerTwoStat,
-  spanAnimDot
+  spanAnimDot,
+  link
 }) => {
  
   const ballRef = useRef(null);
   const ballHeadingRef = useRef(null);
   const ballSpan = useRef(null);
-  return (
-    <div
+  const ballContent = <div
       className={className ? styles[className] : styles["container"]}
       ref={ballRef}
       onMouseMove={e => {
@@ -24,7 +25,6 @@ const BallElasticAnimComp = ({
         let x = e.clientX - rect.left; //x position within the element.
         let y = e.clientY - rect.top; //y position within the element.
         const divideValue = centerTwoStat ? 4 : 2
-         console.log(x-divideValue);
         gsap.to(ballRef.current, {
           x: Math.floor(x - center),
           y: Math.floor(y - center)
@@ -60,7 +60,6 @@ const BallElasticAnimComp = ({
         }
       }}
       onMouseLeave={e => {
-        console.log(e.clientX);
         gsap.to(ballRef.current, {
           x: `0`,
           y: `0`,
@@ -78,7 +77,6 @@ const BallElasticAnimComp = ({
             y: "100%",
             duration: 1
           });
-          console.log(ballRef.current.childNodes[0]);
           gsap.to(ballRef.current.childNodes[0], {
             x: `0px`
           });
@@ -102,6 +100,14 @@ const BallElasticAnimComp = ({
       {!title && children}
       <span ref={ballSpan}></span>
     </div>
+  if (link) {
+    return <Link href={link}>
+    {ballContent}
+    </Link>
+  }
+
+  return (
+    ballContent
   );
 };
 

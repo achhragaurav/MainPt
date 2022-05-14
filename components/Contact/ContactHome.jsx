@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from "../../styles/Contact/ContactPage.module.css"
 import BallElasticAnimComp from '../AnimationComp/BallElasticAnimComp'
-import {BsArrowDown} from "react-icons/bs"
+import { BsArrowDown } from "react-icons/bs"
+import Link from "next/link";
+
 const ContactHome = () => {
     const getTime = () =>{
         let date = new Date();  
@@ -34,7 +36,9 @@ const ContactHome = () => {
             </div>
             <div className={styles["first-two"]}>
                 <span className={styles['line2']}></span>
-                <BallElasticAnimComp styles={styles} title="Get in touch"/>
+                  <Link href="/contact">
+                  <BallElasticAnimComp link="/contact" styles={styles} title="Get in touch"/>
+                  </Link>
             </div>
             <div className={styles["first-three"]}>
                 <div className={styles["three-buttons"]}>
