@@ -64,10 +64,10 @@ const ContactHome = () => {
                 </div>
                 </div>
                 <div className={styles["socials"]}>
-                    <span>Awwards</span>
-                    <span>Instagram</span>
-                    <span>Dribble</span>
-                    <span>Linkden</span>
+                    <span><a href="">GitHub</a></span>
+                    <span><a href="">Instagram</a> </span>
+                    <span><a href="">Dribble</a> </span>
+                    <span><a href="">Linkden</a> </span>
                 </div>
             </div>
 

@@ -131,7 +131,7 @@ font-size: calc(1px + 1.2vw);
     list-style: none;
 }
 .work-page-projects ul li{
-    padding: 1rem;
+    padding: 2.5rem;
     margin: 1rem;
     width: 47%;
 }

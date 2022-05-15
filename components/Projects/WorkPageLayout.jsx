@@ -1,8 +1,75 @@
 import React from 'react'
 import classes from "../../styles/Work/WorkPageLayout.module.css";
 import BallElasticAnimComp from '../AnimationComp/BallElasticAnimComp';
+import {gsap} from "gsap"
+
+const data = [
+  {
+    heading: "Ecommerce Website",
+    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    cat: "Interation and shopping",
+    year:"2022"
+  },
+{
+    heading: "Netflix Clone",
+    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    cat: "Interation and shopping",
+    year:"2022"
+  },
+  {
+    heading: "Airbnb Clone",
+    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    cat: "Interation and shopping",
+    year:"2022"
+  },
+  {
+    heading: "Ecommerce Website",
+    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    cat: "Interation and shopping",
+    year:"2022"
+  },
+  {
+    heading: "Ecommerce Website",
+    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    cat: "Interation and shopping",
+    year:"2022"
+  },
+  {
+    heading: "Ecommerce Website",
+    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    cat: "Interation and shopping",
+    year:"2022"
+  },
+]
 
 const WorkPageLayout = () => {
+  const animProjectHover = (e) => {
+     
+    console.log(e.target.closest("li"));
+    gsap.to(e.target.closest("li"), {
+      transform: `scale(1.03)`,
+     
+    })
+    console.log(e.target.nextElementSibling);
+    gsap.to(e.target.closest("li"), {
+      boxShadow:`2px 3px 36px -9px rgba(0,0,0,0.75)`,
+     
+    })
+    // gsap.to(e.target.closest("li"), {
+    //   transform:`scale(1.1)`
+    // })
+  }
+  const animProjectHoverRet = (e) => {
+    gsap.to(e.target.closest("li"), {
+      transform: `scale(1)`,
+      boxShadow: `0px 0px 0px 0px rgba(0,0,0,0.0)`,
+      ease:"power0in"
+    })
+
+    // gsap.to(e.target.closest("li"), {
+    //   transform:`scale(1.1)`
+    // })
+  }
   return (
       <section className={classes["work-page-layout"]}>
           <div className={classes["work-page-container"]}>
@@ -31,60 +98,20 @@ const WorkPageLayout = () => {
               </div>
               <div className={classes["work-page-projects"]}>
                   <ul>
-      <li>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Ecommerce Website</h1>
+            {data.map((item) => {
+              return (<li onMouseEnter={(e) =>{animProjectHover(e)}}
+              onMouseLeave={(e) =>{animProjectHoverRet(e)}}
+              >
+        <img src={`${item.img}`} alt="" />
+        <h1>{item.heading}</h1>
         <span></span>
         <div className={classes["cat"]}>
-          <p>Interation and shopping</p>
-          <p>2021</p>
+          <p>{item.cat}</p>
+          <p>{item.year}</p>
         </div>
-      </li>
-      <li>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Netflix Clone</h1>
-        <span></span>
-        <div className={classes["cat"]}>
-          <p>Details and reviews</p>
-          <p>2022</p>
-        </div>
-      </li>
-      <li>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Airbnb Clone</h1>
-        <span></span>
-        <div className={classes["cat"]}>
-          <p>Browse and Book</p>
-          <p>2022</p>
-        </div>
-                      </li>
-                      <li>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Airbnb Clone</h1>
-        <span></span>
-        <div className={classes["cat"]}>
-          <p>Browse and Book</p>
-          <p>2022</p>
-        </div>
-                      </li>
-                      <li>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Airbnb Clone</h1>
-        <span></span>
-        <div className={classes["cat"]}>
-          <p>Browse and Book</p>
-          <p>2022</p>
-        </div>
-                      </li>
-                      <li>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Airbnb Clone</h1>
-        <span></span>
-        <div className={classes["cat"]}>
-          <p>Browse and Book</p>
-          <p>2022</p>
-        </div>
-      </li>
+      </li>)
+      })}
+      
     </ul>
               </div>
           </div>
