@@ -304,18 +304,10 @@ const Navbar = ({ colorFirstNav }) => {
             <div className={styles["nav-socials"]}>
               <p>SOCIALS</p>
               <ol className={styles["socialInner"]}>
-                <li>
-                  <a href="">Awwards</a>
-                </li>
-                <li>
-                  <a href="">Insta</a>
-                </li>
-                <li>
-                  <a href="">Facebook</a>
-                </li>
-                <li>
-                  <a href="">Linkden</a>
-                </li>
+                <li><a href="https://github.com/achhragaurav">GitHub</a></li>
+                    <li><a href="https://www.instagram.com/achhragaurav/">Instagram</a> </li>
+                    <li><a href="https://dribbble.com/gaurav008">Dribble</a> </li>
+                    <li><a href="https://www.linkedin.com/in/gaurav-ashra-aaa596129/">Linkden</a> </li>
               </ol>
             </div>
           </div>

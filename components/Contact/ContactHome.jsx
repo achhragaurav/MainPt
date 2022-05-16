@@ -64,10 +64,10 @@ const ContactHome = () => {
                 </div>
                 </div>
                 <div className={styles["socials"]}>
-                    <span><a href="">GitHub</a></span>
-                    <span><a href="">Instagram</a> </span>
-                    <span><a href="">Dribble</a> </span>
-                    <span><a href="">Linkden</a> </span>
+                    <span><a href="https://github.com/achhragaurav">GitHub</a></span>
+                    <span><a href="https://www.instagram.com/achhragaurav/">Instagram</a> </span>
+                    <span><a href="https://dribbble.com/gaurav008">Dribble</a> </span>
+                    <span><a href="https://www.linkedin.com/in/gaurav-ashra-aaa596129/">Linkden</a> </span>
                 </div>
             </div>
 

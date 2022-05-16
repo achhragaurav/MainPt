@@ -3,7 +3,7 @@ import classes from "../../styles/Work/WorkPageLayout.module.css";
 import BallElasticAnimComp from '../AnimationComp/BallElasticAnimComp';
 import {gsap} from "gsap"
 
-const data = [
+export const data = [
   {
     heading: "Ecommerce Website",
     img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

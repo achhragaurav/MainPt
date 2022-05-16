@@ -59,7 +59,7 @@ const Layout = ({children}) => {
     animate="enter" // Animated state to variants.enter
     exit="exit" // Exit state (used later) to variants.exit
     transition={{ type: 'linear' }} // Set the transition to linear
-    style={{width:"500px", height:"150vh", background:"black", position:"absolute",
+    style={{width:"25vw", height:"150vh", background:"black", position:"absolute",
     top:"50%",
     left:"0",
     display: 'block',
@@ -73,9 +73,9 @@ const Layout = ({children}) => {
     animate="enter" // Animated state to variants.enter
     exit="exit" // Exit state (used later) to variants.exit
     transition={{ type: 'linear' }} // Set the transition to linear
-    style={{width:"500px", height:"150vh", background:"black", position:"absolute",
+    style={{width:"25vw", height:"150vh", background:"black", position:"absolute",
     top:"50%",
-    left:"500px",
+    left:"25vw",
     display: 'block',
     }}
     
@@ -86,9 +86,9 @@ const Layout = ({children}) => {
     animate="enter" // Animated state to variants.enter
     exit="exit" // Exit state (used later) to variants.exit
     transition={{ type: 'linear' }} // Set the transition to linear
-    style={{width:"500px", height:"150vh", background:"black", position:"absolute",
+    style={{width:"25vw", height:"150vh", background:"black", position:"absolute",
     top:"50%",
-    left:"1000px",
+        left:"50vw",
     display: 'block',
     }}
     
@@ -99,9 +99,9 @@ const Layout = ({children}) => {
     animate="enter" // Animated state to variants.enter
     exit="exit" // Exit state (used later) to variants.exit
     transition={{ type: 'linear' }} // Set the transition to linear
-    style={{width:"500px", height:"150vh", background:"black", position:"sticky",
+    style={{width:"25vw", height:"150vh", background:"black", position:"sticky",
     top:"50%",
-    left:"1500px",
+        left:"75vw",
     display: 'block',
     }}
     onAnimationComplete={() => {

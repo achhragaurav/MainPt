@@ -77,10 +77,10 @@ const ContactPage = () => {
             </div>
             <div className={classes["socials-holder"]}>
               <p>SOCIALS</p>
-              <h3>Awwwards</h3>
-              <h3>Instagram</h3>
-              <h3>Dribble</h3>
-              <h3>Linkden</h3>
+              <h3><a href="https://github.com/achhragaurav">GitHub</a></h3>
+                    <h3><a href="https://www.instagram.com/achhragaurav/">Instagram</a> </h3>
+                    <h3><a href="https://dribbble.com/gaurav008">Dribble</a> </h3>
+                    <h3><a href="https://www.linkedin.com/in/gaurav-ashra-aaa596129/">Linkden</a> </h3>
             </div>
           </div>
               </div>

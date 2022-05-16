@@ -2,7 +2,7 @@ import {gsap} from 'gsap';
 import React,{useRef,useState} from 'react';
 import classes from "./BigProject.module.css"
 import BallElasticAnimComp from "../AnimationComp/BallElasticAnimComp"
-
+import { data } from './WorkPageLayout';
 const BigProjectList = () => {
   const animProjectHover = (e) => {
     gsap.to(e.target.closest("li"), {
@@ -32,7 +32,8 @@ const BigProjectList = () => {
   return <section className={classes["big-project"]}>
     <p>Recent Work</p>
     <ul>
-      <li onMouseOverCapture={(e) => {
+      {data.slice(0,3).map((item,index) => {
+       return  <li key={index} onMouseOverCapture={(e) => {
         animProjectHover(e)
       }}
       
@@ -40,44 +41,16 @@ const BigProjectList = () => {
         animProjectHoverRet(e)
       }}
       >
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Ecommerce Website</h1>
+        <img src={`${item.img}`} alt="" />
+        <h1>{item.heading}</h1>
         <span></span>
         <div className={classes["cat"]}>
-          <p>Interation and shopping</p>
-          <p>2021</p>
+           <p>{item.cat}</p>
+          <p>{item.year}</p>
         </div>
       </li>
-      <li onMouseOverCapture={(e) => {
-        animProjectHover(e)
-      }}
+     })}
       
-      onMouseLeave={(e) => {
-        animProjectHoverRet(e)
-      }}>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Netflix Clone</h1>
-        <span></span>
-        <div className={classes["cat"]}>
-          <p>Details and reviews</p>
-          <p>2022</p>
-        </div>
-      </li>
-      <li onMouseOverCapture={(e) => {
-        animProjectHover(e)
-      }}
-      
-      onMouseLeave={(e) => {
-        animProjectHoverRet(e)
-      }}>
-        <img src="https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1>Airbnb Clone</h1>
-        <span></span>
-        <div className={classes["cat"]}>
-          <p>Browse and Book</p>
-          <p>2022</p>
-        </div>
-      </li>
     </ul>
     <button><BallElasticAnimComp link="/work" centerTwoStat={true} styles={classes} title="More Work" /></button>
     </section>
