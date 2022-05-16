@@ -98,8 +98,8 @@ const WorkPageLayout = () => {
               </div>
               <div className={classes["work-page-projects"]}>
                   <ul>
-            {data.map((item) => {
-              return (<li onMouseEnter={(e) =>{animProjectHover(e)}}
+            {data.map((item,index) => {
+              return (<li key={index} onMouseEnter={(e) =>{animProjectHover(e)}}
               onMouseLeave={(e) =>{animProjectHoverRet(e)}}
               >
         <img src={`${item.img}`} alt="" />
