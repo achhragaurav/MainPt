@@ -41,7 +41,7 @@ const BigProjectList = () => {
         animProjectHoverRet(e)
       }}
       >
-         <a target="_blank" href={`${item.link}`}>
+         <a rel="noreferrer" target="_blank" href={`${item.link}`}>
            <img src={`${item.img}`} alt="" />
         <h1>{item.heading}</h1>
         <span></span>
