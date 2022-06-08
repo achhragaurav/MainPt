@@ -151,14 +151,18 @@
 }
 
 .containerLinkBig span {
-  background-color: white;
+  background-color: transparent;
   min-width: 26px !important;
   height: 5px;
   display: block;
   border-radius: 20px;
   opacity: 0;
   margin-left: 50px;
+  margin-bottom: 80px;
   
+}
+.containerLinkBig:hover ~ .containerLinkBig span{
+opacity: 1;
 }
 /* Copied Styles from 1200 */
 .second-nav {

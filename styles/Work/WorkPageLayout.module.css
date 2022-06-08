@@ -1,7 +1,7 @@
 
 .work-page-layout{
 width: 100vw;
-height: 28in;
+min-height: 28in;
 display: flex;
 flex-direction: column;
 align-items: center;

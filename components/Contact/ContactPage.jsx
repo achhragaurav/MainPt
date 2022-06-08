@@ -1,7 +1,54 @@
 import React from 'react'
+import { useState,useRef } from 'react';
 import classes from "../../styles/Contact/ContactPageMain.module.css";
+import BallElasticAnimComp from '../AnimationComp/BallElasticAnimComp';
 
 const ContactPage = () => {
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
+  const servicesRef = useRef(null)
+  const organisationRef = useRef(null)
+  const messageRef = useRef(null)
+
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    services: "",
+    organisation: "",
+    message:""
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormState({
+    name: nameRef.current.value,
+    email: emailRef.current.value,
+    services: servicesRef.current.value,
+    organisation: organisationRef.current.value,
+    message:messageRef.current.value
+    })
+    if (formState.email.length < 1 ||
+      formState.name.length < 1 ||
+      formState.services.length < 1 ||
+      formState.organisation.length < 1 ||
+      formState.email.message < 1
+       ) {
+        alert("Please enter valid values")
+    }
+    else {
+      fetch('/api/form', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({...formState}),
+      }).then((res) => {
+       return res.json()
+      }).then((resJson) => {
+        console.log(resJson);
+  })
+    }
+  }
   return (
       <section className={classes["contact-main"]}>
           <div className={classes["contact-main-container"]}>
@@ -17,14 +64,14 @@ const ContactPage = () => {
         <div className={classes["contact-details"]}>
           
           <div className={classes["contact-form"]}>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <div className={classes["form-part"]}>
                 <span></span>
                 <div className={classes["form-part-1"]}>
                   <p>01</p>
                   <label htmlFor="">What is your name?</label>
                 </div>
-                <input type="text" placeholder='John Doe'/>
+                <input ref={nameRef} type="text" placeholder='John Doe'/>
               </div>
               <div className={classes["form-part"]}>
                 <span></span>
@@ -32,7 +79,7 @@ const ContactPage = () => {
                   <p>02</p>
                   <label htmlFor="">What&apos;s your email?</label>
                 </div>
-                <input type="text" placeholder='abc@gmail.com'/>
+                <input ref={emailRef} type="text" placeholder='abc@gmail.com'/>
               </div>
               <div className={classes["form-part"]}>
                 <span></span>
@@ -40,7 +87,7 @@ const ContactPage = () => {
                   <p>03</p>
                   <label htmlFor="">What&apos;s the name of your organization?</label>
                 </div>
-                <input type="text" placeholder='John & Doe'/>
+                <input ref={organisationRef} type="text" placeholder='John & Doe'/>
               </div>
               <div className={classes["form-part"]}>
                 <span></span>
@@ -48,7 +95,7 @@ const ContactPage = () => {
                   <p>04</p>
                   <label htmlFor="">What services are you looking for?</label>
                 </div>
-                <input type="text" placeholder='Web Design, Web Development ...'/>
+                <input ref={servicesRef} type="text" placeholder='Web Design, Web Development ...'/>
               </div>
               <div className={classes["form-part"]}>
                 <span></span>
@@ -56,11 +103,11 @@ const ContactPage = () => {
                   <p>05</p>
                   <label htmlFor="">Your message</label>
                 </div>
-                <textarea  type="text" placeholder='Hello Gaurav can you help me with ...'/>
+                <textarea ref={messageRef} type="text" placeholder='Hello Gaurav can you help me with ...'/>
               </div>
               <div className={classes["form-button"]}>
-                <span></span>
-                <button>Send it!</button>
+                <span className={classes["form-button-line"]}></span>
+                <button> <BallElasticAnimComp styles={classes} title="Send it!"/></button>
               </div>
             </form>
           </div>

@@ -2,45 +2,8 @@ import React from 'react'
 import classes from "../../styles/Work/WorkPageLayout.module.css";
 import BallElasticAnimComp from '../AnimationComp/BallElasticAnimComp';
 import {gsap} from "gsap"
+import { projects } from './WorkProjects';
 
-export const data = [
-  {
-    heading: "Ecommerce Website",
-    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cat: "Interation and shopping",
-    year:"2022"
-  },
-{
-    heading: "Netflix Clone",
-    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cat: "Interation and shopping",
-    year:"2022"
-  },
-  {
-    heading: "Airbnb Clone",
-    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cat: "Interation and shopping",
-    year:"2022"
-  },
-  {
-    heading: "Ecommerce Website",
-    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cat: "Interation and shopping",
-    year:"2022"
-  },
-  {
-    heading: "Ecommerce Website",
-    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cat: "Interation and shopping",
-    year:"2022"
-  },
-  {
-    heading: "Ecommerce Website",
-    img: "https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cat: "Interation and shopping",
-    year:"2022"
-  },
-]
 
 const WorkPageLayout = () => {
   const animProjectHover = (e) => {
@@ -98,17 +61,19 @@ const WorkPageLayout = () => {
               </div>
               <div className={classes["work-page-projects"]}>
                   <ul>
-            {data.map((item,index) => {
+            {projects.map((item,index) => {
               return (<li key={index} onMouseEnter={(e) =>{animProjectHover(e)}}
               onMouseLeave={(e) =>{animProjectHoverRet(e)}}
               >
-        <img src={`${item.img}`} alt="" />
+                <a target="_blank" href={`${item.link}`}>
+                  <img src={`${item.img}`} alt="" />
         <h1>{item.heading}</h1>
         <span></span>
         <div className={classes["cat"]}>
           <p>{item.cat}</p>
           <p>{item.year}</p>
         </div>
+        </a>
       </li>)
       })}
       

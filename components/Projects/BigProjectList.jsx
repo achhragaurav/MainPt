@@ -2,7 +2,7 @@ import {gsap} from 'gsap';
 import React,{useRef,useState} from 'react';
 import classes from "./BigProject.module.css"
 import BallElasticAnimComp from "../AnimationComp/BallElasticAnimComp"
-import { data } from './WorkPageLayout';
+import { projects } from './WorkProjects';
 const BigProjectList = () => {
   const animProjectHover = (e) => {
     gsap.to(e.target.closest("li"), {
@@ -32,7 +32,7 @@ const BigProjectList = () => {
   return <section className={classes["big-project"]}>
     <p>Recent Work</p>
     <ul>
-      {data.slice(0,3).map((item,index) => {
+      {projects.slice(0,3).map((item,index) => {
        return  <li key={index} onMouseOverCapture={(e) => {
         animProjectHover(e)
       }}
@@ -41,13 +41,15 @@ const BigProjectList = () => {
         animProjectHoverRet(e)
       }}
       >
-        <img src={`${item.img}`} alt="" />
+         <a target="_blank" href={`${item.link}`}>
+           <img src={`${item.img}`} alt="" />
         <h1>{item.heading}</h1>
         <span></span>
         <div className={classes["cat"]}>
            <p>{item.cat}</p>
           <p>{item.year}</p>
         </div>
+        </a>
       </li>
      })}
       

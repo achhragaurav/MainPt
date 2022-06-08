@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
 .home-section{
     display: flex;
     flex-direction: column;
@@ -7,6 +8,9 @@
     justify-content: center;
     font-size: calc(20px + 1vw);
     color: white;
+    background-color:black;
+    position: absolute;
+    top: 0;
 }
 .home-heading{
     width: 60%;
@@ -17,11 +21,12 @@
     padding-left: 50px;
     justify-content: center;
     position: relative;
-        z-index: 30;
+    z-index: 30;
 }
 .home-heading h1{
-    font-size: 3em;
+    font-size: 5em;
     font-weight: 300;
+    font-family: 'Arapey', serif !important;
 }
 .home-heading p {
     padding-left: 10px;
@@ -29,6 +34,7 @@
     font-weight: 300;
     color: rgb(126, 126, 126);
     padding-top: 20px;
+    font-family: 'Arapey', serif !important;
 }
 .home-heading span{
     margin-top: 30px;

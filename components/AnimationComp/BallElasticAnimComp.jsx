@@ -10,7 +10,8 @@ const BallElasticAnimComp = ({
   navState,
   centerTwoStat,
   spanAnimDot,
-  link
+  link,
+  spanElement
 }) => {
  
   const ballRef = useRef(null);
@@ -98,7 +99,9 @@ const BallElasticAnimComp = ({
     >
       {title && <h5 ref={ballHeadingRef}>{title}</h5>}
       {!title && children}
-      <span ref={ballSpan}></span>
+    {!spanElement && <span ref={ballSpan}></span>}
+    {spanElement && <span ref={ballSpan}>{spanElement}</span>}
+    
     </div>
   if (link) {
     return <Link href={link}>

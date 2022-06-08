@@ -109,6 +109,13 @@ justify-content: space-between;
         justify-content: center;
         padding-left: 0;
     } 
+    .big-project ul li{
+        width: max-content;
+    }
+        .big-project ul a {
+            width: 100%;
+        }
+
     .cat p{
         font-size: 1em;
     

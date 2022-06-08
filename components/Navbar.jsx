@@ -5,6 +5,11 @@ import styles from "../styles/Navbar.module.css";
 import BallElasticAnimComp from "./AnimationComp/BallElasticAnimComp";
 import { gsap } from "gsap";
 const Navbar = ({ colorFirstNav }) => {
+  const spanElementHouse = <img width="100px" src="https://i.ibb.co/qD7Yz9m/house.png" alt="" />
+  const spanElementAbout = <img width="100px" src="https://i.ibb.co/D4M8gwX/information.png" alt="" />
+  const spanElementWork = <img width="100px" src="https://i.ibb.co/jRf3q23/work-in-progress.png" alt="" />
+  const spanElementContact = <img width="100px" src="https://i.ibb.co/9Hs7qKp/mail.png" alt="" />
+
   const colorChange = (e, back) => {
     if (back) {
       return gsap.to(menuUl.current,{backgroundColor:"#1c1d10"})
@@ -15,15 +20,15 @@ const Navbar = ({ colorFirstNav }) => {
     }
     if (e.target.textContent === "About"
     || (e.target.closest("h5") && e.target.closest("h5").textContent === "About")) {
-      return gsap.to(menuUl.current,{backgroundColor:"#002705"})
+      return gsap.to(menuUl.current,{backgroundColor:"#00263D"})
     }
     if (e.target.textContent === "Work"
       || (e.target.closest("h5") && e.target.closest("h5").textContent === "Work")) {
-      return gsap.to(menuUl.current,{backgroundColor:"#000727"})
+      return gsap.to(menuUl.current,{backgroundColor:"#3D3300"})
     }
     if (e.target.textContent === "Contact"
       || (e.target.closest("h5") && e.target.closest("h5").textContent === "Contact")) {
-      return gsap.to(menuUl.current,{backgroundColor:"rgb(0, 30, 34)"})
+      return gsap.to(menuUl.current,{backgroundColor:"#3C0206"})
     }
     
   }
@@ -256,7 +261,9 @@ const Navbar = ({ colorFirstNav }) => {
                   spanAnimDot={true}
                   styles={{
                     ...styles
-                  }}
+                    }}
+                    // Span element
+                    spanElement={spanElementHouse}
                   title={"Home"}
                   className={"containerLinkBig"}
                 /></li>
@@ -269,7 +276,8 @@ const Navbar = ({ colorFirstNav }) => {
                   spanAnimDot={true}
                   styles={{
                     ...styles
-                  }}
+                    }}
+                     spanElement={spanElementAbout}
                   title={"About"}
                   className={"containerLinkBig"}
                 /></li>
@@ -278,7 +286,9 @@ const Navbar = ({ colorFirstNav }) => {
                 <li onMouseLeave={(e) => {
                   colorChange(e,true)
                 }} onMouseMove={colorChange} onClick={navPageChange}><BallElasticAnimComp
-                  centerTwoStat={true}
+                    centerTwoStat={true}
+                     spanElement={spanElementWork}
+                    
                   spanAnimDot={true}
                   styles={{
                     ...styles
@@ -295,7 +305,9 @@ const Navbar = ({ colorFirstNav }) => {
                   spanAnimDot={true}
                   styles={{
                     ...styles
-                  }}
+                    }}
+                     spanElement={spanElementContact}
+                    
                   title={"Contact"}
                   className={"containerLinkBig"}
                 /></li>

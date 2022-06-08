@@ -12,6 +12,7 @@ import BigProjectList from '../components/Projects/BigProjectList'
 import AboutHome from '../components/About/AboutHome'
 import ContactHome from '../components/Contact/ContactHome'
 import HomeSection from '../components/Home/HomeSection'
+import { Main } from '../components/Home/ThreeJSAnim/Main'
 
 export default function Home() {
   const aboutRef = useRef(null);
@@ -21,7 +22,8 @@ export default function Home() {
     <Navbar colorFirstNav={"white"} />
     <Layout />
       <div className={styles["main"]}>
-        <HomeSection/>
+        <HomeSection />
+        {/* <Main/> */}
       </div>
       <AboutHome/>
       <div className={styles["main-projects"]}>

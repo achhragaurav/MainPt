@@ -1,8 +1,9 @@
 .contact-main{
     width: 100%;
-    height: 20in;
+    /* min-height: fit-content; */
     background-color: #1c1d20;
     font-size: 2vw;
+    height: 20in;
     color: white;
     display: flex;
     align-items: center;
@@ -41,13 +42,15 @@
 }
 .contact-details{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     width: 100%;
-    align-items: flex-start;
+    height: 80%;
+    align-items: flex-end;
     justify-content: space-around;
 }
 .contact-form{
     width: 60%;
+    min-width: 4in;
     height: 100%;
     min-width: 300px;
 }
@@ -79,7 +82,7 @@
 .form-part-4 label,
 .form-part-5 label {
     font-weight: 400;
-    font-size: .8em;
+    font-size: calc(.5em + 10px);
     margin-left: 20px;
     color: rgb(233, 233, 233);
 }
@@ -89,10 +92,30 @@
     border: none;
     line-height: 1.5rem;
     color: white;
-    font-size: .8em;
-    margin-bottom: 40px;
+    font-size: calc(.5em + 10px);
+        margin-bottom: 40px;
     margin-top: 20px;
     margin-left: 40px;
+}
+.form-button {
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+.form-button-line{
+    width: 100%;
+    display: block;
+    background-color: #838485;
+    height: .3px;
+    position: relative;
+    top: 9vh;
+}
+.form-button button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 70%;
 }
 .form-part span{
     display: block;
@@ -125,14 +148,14 @@
     /* Firefox */
 }
 .contact-details-socials {
-    font-size: .4em;
+        font-size: calc(.5em + 5px);
     font-weight: 300;
     width: 30%;
     align-items: flex-start;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-    height:30%;
+    height:40%;
     padding-left: 5rem;
 }
 .contact-details-holder{
@@ -146,7 +169,7 @@
 }
 .contact-details-holder h3{
     padding-bottom: 15px;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight:400;
 }
 
@@ -161,8 +184,7 @@
 }
 .bussiness-details h3 {
     padding-bottom: 15px;
-    font-size: 1.2em;
-    font-weight:400;
+    font-size: 1em;    font-weight:400;
 }
 
 .socials-holder {
@@ -176,6 +198,63 @@
 }
 .socials-holder h3 {
     padding-bottom: 15px;
-    font-size: 1.2em;
-    font-weight:400;
+    font-size: 1em;    font-weight:400;
+}
+/* Ball */
+
+.container {
+    border-radius: 50%;
+    min-width: calc(1.2in + 3vw);
+    min-height: calc(1.2in + 3vw);
+    width: 1.8in;
+    height: 1.8in;
+    background-color: #455ce9;
+    color: white;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+@media only screen and (max-width: 600px) {
+  
+    .form-button{
+        height: 10%;
+    }
+    .form-button button{
+    left: 30%;
+    top: -10vh;
+    }
+        .form-button span {
+           display: none; 
+        }
+    .contact-heading{
+        width: 100%;
+        height: 20%;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+         .contact-heading h1{
+             font-size: 4em;
+         }
+    .contact-details{
+        height: 40%;
+    }
+    .contact-form{
+        width: 100%;
+        height: 40%;
+    }
+        .contact-details-socials {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            align-items: center;
+            padding: 0;
+   
+        }
 }
