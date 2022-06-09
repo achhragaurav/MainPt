@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+.home-section-main{
+    background-color: #f5f5f5;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.holder{
+    overflow: hidden;
+    display: flex;
+    height: 2in;
+}
+.holder p{
+    top: 2in;
+    position: relative;
+    font-family: 'PT Sans', sans-serif;
+    margin: 10px;
+    
+}

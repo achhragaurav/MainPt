@@ -7,18 +7,54 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 
-const HomeSection = () => {
+const HomeSection = ({initialLoad, setInitialLoad}) => {
 
-    const homeImgRef = useRef(null)
-    const subRefTrigger = useRef(null)
+    const subHeading = useRef(null)
+    const headingOne = useRef(null)
+    const homeSectionRef = useRef(null)
+
+
     useEffect(() => {
-     
+        gsap.fromTo(subHeading.current, {
+      y:100   
+        }, {
+            y: 0,
+            delay:1
+        })
+         gsap.fromTo([headingOne.current], {
+      y:200   
+        }, {
+             y: 0,
+            delay:1.5
+         })
+        gsap.fromTo([headingOne.current, subHeading.current], {
+            opacity: 1,
+        }, {
+            
+            opacity: 0,
+            delay: 2.5
+        
+        })
+        gsap.fromTo([homeSectionRef.current], {
+           y:0
+        }, {
+            
+          y:"-100vh",
+            delay: 3,
+            display:"none"
+        })
+
+        
     },[])
   return (
-      <section className={styles["home-section"]} ref={subRefTrigger}>
+      <section className={styles["home-section"]} ref={homeSectionRef}>
           <div className={styles["home-heading"]}>
-              <p>Freelance Devloper & Designer</p>
-              <h1>Gaurav Achhra</h1>
+              <span>
+                  <p ref={subHeading}>Freelance Devloper & Designer</p>
+              </span>
+              <span>
+                  <h1 ref={headingOne}>Gaurav Achhra</h1>
+              </span>
             </div>
       </section>
   )

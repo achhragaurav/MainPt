@@ -3,6 +3,7 @@
   height: 90px;
   position: absolute;
   color: white;
+  z-index: 50;
 }
 .first-nav {
   display: flex;

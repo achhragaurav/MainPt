@@ -13,16 +13,20 @@ import AboutHome from '../components/About/AboutHome'
 import ContactHome from '../components/Contact/ContactHome'
 import HomeSection from '../components/Home/HomeSection'
 import { Main } from '../components/Home/ThreeJSAnim/Main'
+import HomeSectionMain from '../components/Home/HomeSectionMain'
 
 export default function Home() {
+  const [initialLoad, setInitialLoad] = useState(true);
   const aboutRef = useRef(null);
   const aboutHeadingRef = useRef(null);
+
   return (
     <>
     <Navbar colorFirstNav={"white"} />
     <Layout />
       <div className={styles["main"]}>
-        <HomeSection />
+       {initialLoad &&  <HomeSection initialLoad={initialLoad} setInitialLoad={setInitialLoad} />}
+        <HomeSectionMain/>
         {/* <Main/> */}
       </div>
       <AboutHome/>
