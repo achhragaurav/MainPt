@@ -22,20 +22,7 @@
     top: 2in;
     position: relative;
     font-size: calc(15px + 7vw);
-    font-family: 'Cinzel Decorative', cursive;
-        /* font-family: 'Bellota', cursive; */
-        /* font-family: 'Comfortaa', cursive; */
-        /* font-family: 'Forum', cursive; */
-        /* font-family: 'Libre Barcode 39 Text', cursive; */
-        /* font-family: 'Londrina Outline', cursive; */
-        /* font-family: 'Megrim', cursive; */
-        /* font-family: 'Monofett', cursive; */
-        /* font-family: 'Monoton', cursive; */
-        /* font-family: 'Poiret One', cursive; */
-        /* font-family: 'Press Start 2P', cursive; */
-        /* font-family: 'Righteous', cursive; */
-        /* font-family: 'Uncial Antiqua', cursive; */
-        /* font-family: 'Zilla Slab Highlight', cursive; */
+font-family: 'Cinzel Decorative', cursive !important;
     margin: 10px;
     
 }
