@@ -12,14 +12,23 @@ const HomeSection = ({initialLoad, setInitialLoad}) => {
     const subHeading = useRef(null)
     const headingOne = useRef(null)
     const homeSectionRef = useRef(null)
+const lockScroll = (lock) =>{
+    if(lock){
 
+     return document.body.style.overflow = "hidden";
+    }
+    document.body.style.overflow = "scroll";
+  }
 
     useEffect(() => {
         gsap.fromTo(subHeading.current, {
       y:100   
         }, {
             y: 0,
-            delay:1
+            delay: 1,
+            onStart: () => {
+                lockScroll(true)
+            }
         })
          gsap.fromTo([headingOne.current], {
       y:200   
