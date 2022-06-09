@@ -54,7 +54,9 @@ useEffect(() => {
     return (
         <>
             <Head>
-                <link rel="icon" href="/favicon.png" type="image/png" />
+            
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet"></link>
+
             </Head>
 
             <AnimatePresence
