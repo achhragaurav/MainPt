@@ -18,7 +18,7 @@ const HomeSectionMain = () => {
     const letterEleven = useRef(null)
     const letterTwelve = useRef(null)
     const homeSectionMainC = useRef(null)
-
+const webRef = useRef(null)
 //     const fontRandomiser = () => {
 //         const randomNumber = Math.floor(Math.random() * 13);
 //         const obj = {
@@ -90,6 +90,7 @@ const lockScroll = (lock) =>{
              onComplete: () => {
                  setPortfolio(false)
                  setGaurav(true)
+
             }
         })
     },[]);
@@ -119,7 +120,9 @@ const lockScroll = (lock) =>{
                           
                       })
                 lockScroll(false)
-                      
+                      gsap.to(webRef.current, {
+                          opacity: 1
+                      })
             }
         })
         }
@@ -158,7 +161,10 @@ const lockScroll = (lock) =>{
                       <p ref={letterTwelve}>A</p>
                  </div>
               </div>
-              }
+          }
+          <div className={styles["devHolder"]}>
+              <span ref={webRef}>Web Designer and Developer</span>
+          </div>
     </section>
   )
 }

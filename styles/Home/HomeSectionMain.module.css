@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .holder-container{
     display: flex;
@@ -25,4 +26,11 @@
     font-family: 'Cinzel Decorative' !important;
     margin: 10px;
     
+}
+.devHolder{
+    font-size: 20px;
+    margin-top: 50px;
+}
+.devHolder span{
+    opacity: 0;
 }
