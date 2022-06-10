@@ -1,7 +1,19 @@
+import { gsap } from "gsap"
 import React from 'react'
 import classes from "../../styles/About/AboutPageLayout.module.css";
+import { useRef, useState, useEffect } from "react"
 
 const AboutPageLayout = () => {
+  const mainAboutFirst = useRef(null)
+  useEffect(() => {
+    let delayTimer = `${0.03}`;
+    console.log(mainAboutFirst.current.children[0]);
+    gsap.fromTo(mainAboutFirst.current, {
+      x: 50,
+      opacity:0
+    },{x:0,opacity: 1})
+   
+  },[])
   const para1 = `With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs.
               Solid company branding is the foundation of any succesful website.`;
   const para2 = `I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations,
@@ -14,8 +26,14 @@ const AboutPageLayout = () => {
     <section className={classes["about-page-layout"]}>
       <div className={classes["about-page-container"]}>
         <div className={classes["hero-heading"]}>
-        <h1>Helping brands thrive
-          in the digital world</h1>
+          <h1 ref={mainAboutFirst}><span>Helping</span>
+            <span> brands </span>
+            <span>thrive </span>
+            <span>in </span>
+            <span>the </span>
+            <span>digital </span>
+            <span>world</span>
+          </h1>
       </div>
       <div className={classes["earth-sec"]}>
         <span></span>

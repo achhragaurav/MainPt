@@ -15,8 +15,9 @@ import HomeSection from '../components/Home/HomeSection'
 import { Main } from '../components/Home/ThreeJSAnim/Main'
 import HomeSectionMain from '../components/Home/HomeSectionMain'
 
-export default function Home() {
-  const [initialLoad, setInitialLoad] = useState(true);
+export default function Home({initialLoad, setInitialLoad}) {
+ 
+  
   const aboutRef = useRef(null);
   const aboutHeadingRef = useRef(null);
 
@@ -26,7 +27,7 @@ export default function Home() {
     <Layout />
       <div className={styles["main"]}>
        {initialLoad &&  <HomeSection initialLoad={initialLoad} setInitialLoad={setInitialLoad} />}
-        <HomeSectionMain/>
+        <HomeSectionMain initialLoad={initialLoad} setInitialLoad={setInitialLoad} />
         {/* <Main/> */}
       </div>
       <AboutHome/>

@@ -111,6 +111,8 @@ justify-content: space-between;
     } 
     .big-project ul li{
         width: max-content;
+        position: relative;
+        opacity: 0;
     }
         .big-project ul a {
             width: 100%;

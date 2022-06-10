@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from "../../styles/Home/HomeSectionMain.module.css";
 import { gsap } from "gsap";
-const HomeSectionMain = () => {
+const HomeSectionMain = ({initialLoad, setInitialLoad}) => {
     const [portfolio, setPortfolio] = useState(true);
     const [gaurav, setGaurav] = useState(false);
 
@@ -55,6 +55,31 @@ const lockScroll = (lock) =>{
   }
 
     useEffect(() => {
+        const load = window.localStorage.getItem("initial")
+        if (load) {
+            
+            gsap.fromTo([
+                letterFour.current,
+                letterOne.current,
+                letterNine.current,
+                letterThree.current,
+                letterTwo.current,
+                letterFive.current,
+                letterSeven.current,
+                letterSix.current,
+                letterEight.current,
+        ], {y:"2in"},{
+            y: 0,
+            delay: 3,
+            stagger: .1,
+            color:"black",
+            onStart: () => {
+                gsap.to(homeSectionMainC.current, {
+                    backgroundColor:"#f5f5f5"
+                })
+                lockScroll(true);
+            }
+        })
         gsap.to([
             letterFour.current,
             letterOne.current,
@@ -66,25 +91,7 @@ const lockScroll = (lock) =>{
             letterSix.current,
             letterEight.current,
         ], {
-            y: -165,
-            delay: 3,
-            stagger: .1,
-            onStart: () => {
-                lockScroll(true);
-            }
-        })
-         gsap.to([
-            letterFour.current,
-            letterOne.current,
-            letterNine.current,
-            letterThree.current,
-            letterTwo.current,
-            letterFive.current,
-            letterSeven.current,
-            letterSix.current,
-            letterEight.current,
-        ], {
-            y: -500,
+            y: -200,
             delay: 5,
              stagger: .1,
              onComplete: () => {
@@ -93,10 +100,48 @@ const lockScroll = (lock) =>{
 
             }
         })
-    },[]);
+        }
+    //     else {
+    //             console.log("making it");
+    //             lockScroll(false)
+    //             setPortfolio(false)
+    //                  setGaurav(true)
+    //    }
+    }, []);
+    useEffect(() => {
+        const load = window.localStorage.getItem("initial");
+        if (!initialLoad && !load) {
+            setPortfolio(false);
+            setGaurav(true)
+     
+        }
+    },[])
     useEffect(() => {
         if (gaurav) {
-              gsap.to([
+            gsap.fromTo([
+                letterFour.current,
+                letterOne.current,
+                letterThree.current,
+                letterTwo.current,
+                letterFive.current,
+                letterSix.current,
+            letterSeven.current,
+            letterEight.current,
+            letterNine.current,
+            letterTen.current,
+            letterEleven.current,
+            letterTwelve.current,
+        ],{y:"2in"}, {
+            y: 0,
+                  delay: .5,
+             color:"black",
+                  stagger: .1,
+                  onComplete: () => {
+                      gsap.to(homeSectionMainC.current,  {
+                          backgroundColor: "black",
+                          color:"white"
+                      })
+                      gsap.to([
             letterFour.current,
             letterOne.current,
             letterThree.current,
@@ -109,19 +154,15 @@ const lockScroll = (lock) =>{
             letterTen.current,
             letterEleven.current,
             letterTwelve.current,
-        ], {
-            y: -200,
-            delay: .5,
-                  stagger: .1,
-                  onComplete: () => {
-                      gsap.to(homeSectionMainC.current, {
-                          backgroundColor: "black",
-                          color:"white"
-                          
-                      })
-                lockScroll(false)
+                      ], {
+            color:"white"
+        })
+                      lockScroll(false);
                       gsap.to(webRef.current, {
-                          opacity: 1
+                          opacity: 1,
+                          onComplete: () => {
+                              setInitialLoad(false)
+                          }
                       })
             }
         })

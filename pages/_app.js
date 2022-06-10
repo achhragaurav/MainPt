@@ -1,17 +1,29 @@
 import { AppProps, NextWebVitalsMetric } from 'next/app'
 import Head from 'next/head'
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 
 
 import '../styles/globals.css'
 
-
 function MyApp({ Component, pageProps, router }) {
-    
-
-useEffect(() => {
+     const [initialLoad, setInitialLoad] = useState(true);
+  useEffect(() => {
+    if (initialLoad) {
+      window.localStorage.setItem("initial","true")
+    }
+    else {
+      window.localStorage.setItem("initial","")
+    }
+  }, [initialLoad])
+    useEffect(() => {
+      window.localStorage.setItem("initial", "true")
+        if (window.localStorage.getItem("initial")) {
+            setInitialLoad(true)
+        } else {
+            setInitialLoad(false)
+        }
     Array.from(
         document.querySelectorAll('head > link[rel="stylesheet"][data-n-p]')
     ).forEach(node => {
@@ -64,7 +76,7 @@ useEffect(() => {
                 initial={false}
                 onExitComplete={() => window.scrollTo(0, 0)}
             >
-                <Component {...pageProps} canonical={url} key={url} />
+                <Component initialLoad={initialLoad} setInitialLoad={setInitialLoad} {...pageProps} canonical={url} key={url} />
             </AnimatePresence>
         </>
     )

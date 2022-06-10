@@ -22,7 +22,16 @@ const AboutHome = () => {
       });
       delayTimer = `${+delayTimer+0.03}`
     });
-
+    gsap.fromTo(aboutBallRef.current,{  transform : `scale(0)`}, {
+      transform: `scale(1)`,
+      transformOrigin:"center",
+        ease: "none",
+        delay: delayTimer,
+        ease:"power2.out",
+        scrollTrigger: {
+            trigger: mainAboutFirst.current,
+        }, 
+      });
     gsap.to(mainAboutFirst, {
       x: 200,
       duration: 3
@@ -33,16 +42,7 @@ const AboutHome = () => {
       //   // Whatever other ScrollTrigger vars you need here
       // }
     });
-      gsap.fromTo(aboutBallRef.current,{  y: 300,}, {
-        y: -100,
-        ease: "none",
-        scrollTrigger: {
-            trigger: mainAboutFirst.current,
-            start: "-100px 800px", // the default values
-            end: "800px -100px",
-            scrub: true,
-        }, 
-      });
+    
     // gsap.fromTo(mainAboutFirst.current.children,{  y: 100,}, {
     //     y: 0,
     //     ease: "none",

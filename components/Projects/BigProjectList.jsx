@@ -1,8 +1,11 @@
 import {gsap} from 'gsap';
-import React,{useRef,useState} from 'react';
+import React,{useEffect, useRef,useState} from 'react';
 import classes from "./BigProject.module.css"
 import BallElasticAnimComp from "../AnimationComp/BallElasticAnimComp"
 import { projects } from './WorkProjects';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 const BigProjectList = () => {
   const animProjectHover = (e) => {
     gsap.to(e.target.closest("li"), {
@@ -29,12 +32,66 @@ const BigProjectList = () => {
     //   transform:`scale(1.1)`
     // })
   }
-  return <section className={classes["big-project"]}>
-    <p>Recent Work</p>
+  const containerRef = useRef(null);
+  const containerOne = useRef(null);
+  const containerTwo = useRef(null);
+  const containerThree = useRef(null);
+    useEffect(() => {
+ 
+      gsap.fromTo(containerOne.current, {
+        x: 50,
+        opacity:0,
+          ease: "Power2.out"
+        },{scrollTrigger: {
+          trigger: containerRef.current,
+        },
+            duration:1,
+            x: 0,
+            opacity:1,
+            ease: "Power2.out"
+      });
+      
+
+ gsap.fromTo(containerTwo.current, {
+        x: 50,
+        opacity:0,
+          ease: "Power2.out"
+        },{scrollTrigger: {
+          trigger: containerRef.current,
+        },
+            duration:1,
+            x: 0,
+   opacity: 1,
+            delay:.5,
+            
+            ease: "Power2.out"
+ });
+      
+      
+       gsap.fromTo(containerThree.current, {
+        x: 50,
+        opacity:0,
+          ease: "Power2.out"
+        },{scrollTrigger: {
+          trigger: containerRef.current,
+        },
+            duration:1,
+         x: 0,
+            delay:1,
+            opacity:1,
+            ease: "Power2.out"
+          });
+
+          },[])
+        
+        return <section  className={classes["big-project"]}>
+    <p ref={containerRef}>Recent Work</p>
     <ul>
       {projects.slice(0,3).map((item,index) => {
-       return  <li key={index} onMouseOverCapture={(e) => {
-        animProjectHover(e)
+        return <li ref={
+          index === 1 ? containerOne : index === 2 ? containerTwo : containerThree
+        } key={index} onMouseOverCapture={(e) => {
+          animProjectHover(e)
       }}
       
       onMouseOut={(e) => {
@@ -54,7 +111,7 @@ const BigProjectList = () => {
      })}
       
     </ul>
-    <button><BallElasticAnimComp link="/work" centerTwoStat={true} styles={classes} title="More Work" /></button>
+    <button ><BallElasticAnimComp link="/work" centerTwoStat={true} styles={classes} title="More Work" /></button>
     </section>
 }
 

@@ -21,7 +21,8 @@ const lockScroll = (lock) =>{
   }
 
     useEffect(() => {
-        gsap.fromTo(subHeading.current, {
+        if (initialLoad) {
+            gsap.fromTo(subHeading.current, {
       y:100   
         }, {
             y: 0,
@@ -52,9 +53,10 @@ const lockScroll = (lock) =>{
             delay: 3,
             display:"none"
         })
-
+       }
+       
         
-    },[])
+    },[initialLoad])
   return (
       <section className={styles["home-section"]} ref={homeSectionRef}>
           <div className={styles["home-heading"]}>
