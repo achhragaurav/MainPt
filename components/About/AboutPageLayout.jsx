@@ -6,12 +6,14 @@ import { useRef, useState, useEffect } from "react"
 const AboutPageLayout = () => {
   const mainAboutFirst = useRef(null)
   useEffect(() => {
-    let delayTimer = `${0.03}`;
     console.log(mainAboutFirst.current.children[0]);
     gsap.fromTo(mainAboutFirst.current, {
       x: 50,
-      opacity:0
-    },{x:0,opacity: 1})
+      opacity: 0,
+    }, {
+      x: 0, opacity: 1,
+      delay: .7
+})
    
   },[])
   const para1 = `With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs.

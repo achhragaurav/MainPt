@@ -1,4 +1,5 @@
-import React from 'react'
+import {gsap} from 'gsap';
+import React, { useEffect } from 'react'
 import { useState,useRef } from 'react';
 import classes from "../../styles/Contact/ContactPageMain.module.css";
 import BallElasticAnimComp from '../AnimationComp/BallElasticAnimComp';
@@ -49,11 +50,24 @@ const ContactPage = () => {
   })
     }
   }
+
+  const mainContactFirst = useRef(null);
+    useEffect(() => {
+    gsap.fromTo(mainContactFirst.current, {
+      x: 50,
+      opacity: 0,
+    }, {
+      x: 0, opacity: 1,
+      delay: .7
+})
+   
+  },[])
+
   return (
       <section className={classes["contact-main"]}>
           <div className={classes["contact-main-container"]}>
         <div className={classes["contact-heading"]}>
-          <div className={classes["contact-heading-content"]}>
+          <div ref={mainContactFirst} className={classes["contact-heading-content"]}>
             <h1>Let&apos;s start a</h1>
           <h1>project together</h1>
           </div>

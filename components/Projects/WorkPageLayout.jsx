@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useRef} from 'react'
 import classes from "../../styles/Work/WorkPageLayout.module.css";
 import BallElasticAnimComp from '../AnimationComp/BallElasticAnimComp';
 import {gsap} from "gsap"
@@ -6,6 +6,17 @@ import { projects } from './WorkProjects';
 
 
 const WorkPageLayout = () => {
+  const mainWorkFirst = useRef(null);
+    useEffect(() => {
+    gsap.fromTo(mainWorkFirst.current, {
+      x: 50,
+      opacity: 0,
+    }, {
+      x: 0, opacity: 1,
+      delay: .7
+})
+   
+  },[])
   const animProjectHover = (e) => {
      
     console.log(e.target.closest("li"));
@@ -36,7 +47,7 @@ const WorkPageLayout = () => {
   return (
       <section className={classes["work-page-layout"]}>
           <div className={classes["work-page-container"]}>
-              <div className={classes["work-page-heading"]}>
+              <div ref={mainWorkFirst} className={classes["work-page-heading"]}>
                   <h1>Creating next level</h1>
                   <h1>digital products</h1>
               </div>
