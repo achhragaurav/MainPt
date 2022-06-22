@@ -25,7 +25,7 @@ const ContactHome = () => {
             <div className={styles["first-one"]}>
                 <div className={styles["first-one-left"]}>
                       <div className={styles["first-one-leftHeading"]}>
-                          <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                          <img src="https://i.ibb.co/st8LNj2/MG-1312.jpg" alt="" />
                           <h1> Let&apos;s work</h1>
                     </div>
                     <h1>together</h1>

@@ -72,7 +72,7 @@ const ContactPage = () => {
           <h1>project together</h1>
           </div>
           <div className={classes["contact-heading-image"]}>
-            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <img src="https://i.ibb.co/st8LNj2/MG-1312.jpg" alt="" />
           </div>
               </div>
         <div className={classes["contact-details"]}>
