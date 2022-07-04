@@ -10,20 +10,19 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps, router }) {
      const [initialLoad, setInitialLoad] = useState(true);
   useEffect(() => {
-    if (initialLoad) {
-      window.localStorage.setItem("initial","true")
-    }
-    else {
-      window.localStorage.setItem("initial","")
-    }
+    // if (initialLoad) {
+    //   window.localStorage.setItem("initial","true")
+    // }
+    // else {
+    //   window.localStorage.setItem("initial","")
+    // }
   }, [initialLoad])
     useEffect(() => {
-      window.localStorage.setItem("initial", "true")
-        if (window.localStorage.getItem("initial")) {
-            setInitialLoad(true)
-        } else {
-            setInitialLoad(false)
-        }
+        // if (window.localStorage.getItem("initial")) {
+        //     setInitialLoad(true)
+        // } else {
+        //     setInitialLoad(false)
+        // }
     Array.from(
         document.querySelectorAll('head > link[rel="stylesheet"][data-n-p]')
     ).forEach(node => {

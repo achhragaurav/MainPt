@@ -56,7 +56,7 @@ const lockScroll = (lock) =>{
 
     useEffect(() => {
         const load = window.localStorage.getItem("initial")
-        if (load) {
+        if (load || initialLoad) {
             
             gsap.fromTo([
                 letterFour.current,
@@ -110,7 +110,7 @@ const lockScroll = (lock) =>{
     }, []);
     useEffect(() => {
         const load = window.localStorage.getItem("initial");
-        if (!initialLoad && !load) {
+        if ((!initialLoad || initialLoad === "done") && !load) {
             setPortfolio(false);
             setGaurav(true)
      

@@ -22,6 +22,7 @@ const lockScroll = (lock) =>{
 
     useEffect(() => {
         if (initialLoad) {
+            console.log(initialLoad);
             gsap.fromTo(subHeading.current, {
       y:100   
         }, {
