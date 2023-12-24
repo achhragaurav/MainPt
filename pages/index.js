@@ -21,6 +21,10 @@ export default function Home({initialLoad, setInitialLoad}) {
   const aboutRef = useRef(null);
   const aboutHeadingRef = useRef(null);
 
+useEffect(() =>{
+  window.scrollTo(0, 0)
+},[])
+
   return (
     <>
     <Navbar colorFirstNav={"white"} />

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&display=swap');
+
 .home-section-main{
     background-color: #000;
     width: 100vw;
@@ -23,7 +25,8 @@
     /* top: 2in; */
     position: relative;
     font-size: calc(15px + 7vw);
-    font-family: 'Cinzel Decorative' !important;
+    font-family: 'Cormorant', serif  !important;
+
     margin: 10px;
     color: white;
     
@@ -31,6 +34,7 @@
 .devHolder{
     font-size: 20px;
     margin-top: 50px;
+
 }
 .devHolder span{
     opacity: 0;

@@ -61,6 +61,7 @@
   position: relative;
   min-width: 2in;
   min-height: 2in;
+  
   border-radius: 50%;
   left: -3px;
   z-index: 100;
@@ -268,8 +269,8 @@ opacity: 1;
   color: white;
 }
 .second-nav ul li {
-  font-size: calc(2rem + 2vw);
-  padding-top: 20px;
+  font-size: calc(1rem + 3vh);
+  padding-top: 1vh;
 }
 .nav-socials {
   height: 20%;

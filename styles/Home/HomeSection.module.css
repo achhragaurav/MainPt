@@ -28,6 +28,7 @@
     font-size: .8em;
     font-weight: 300;
     font-family: 'Arapey', serif !important;
+    opacity: 0;
 }
 .home-heading p {
     padding-left: 10px;
@@ -37,11 +38,11 @@
     padding-top: 20px;
     font-family: 'Arapey', serif !important;
     position: relative;
+    opacity: 0;
 }
 .home-heading span{
     height: fit-content;
     overflow: hidden;
-
 }
 .home-img{
     width: 100%;
